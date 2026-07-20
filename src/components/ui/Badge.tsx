@@ -1,6 +1,6 @@
 import type { HTMLAttributes } from 'react';
 
-type BadgeVariant = 'category' | 'available' | 'soldout' | 'free' | 'featured' | 'verified';
+type BadgeVariant = 'category' | 'available' | 'soldout' | 'free' | 'featured' | 'verified' | 'promo';
 
 interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   variant?: BadgeVariant;
@@ -15,6 +15,7 @@ const variantStyles: Record<BadgeVariant, string> = {
   free: 'bg-[#2E7D32] text-white border border-[#2E7D32]',
   featured: 'bg-amber-50 text-amber-700 border border-amber-200',
   verified: 'bg-blue-50 text-blue-700 border border-blue-200',
+  promo: 'bg-[#FFEB3B] text-black border-0 font-bold',
   category: 'border',
 };
 

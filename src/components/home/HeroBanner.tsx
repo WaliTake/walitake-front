@@ -3,8 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { Search, ArrowRight, Recycle } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { Search, MapPin } from 'lucide-react';
 import { ROUTES } from '@/lib/constants';
 
 export function HeroBanner() {
@@ -18,87 +17,56 @@ export function HeroBanner() {
   };
 
   return (
-    <section className="relative min-h-[560px] flex items-center overflow-hidden" aria-label="Hero">
+    <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden" aria-label="Hero">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
           src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1600&h=800&fit=crop"
-          alt="Residuos siendo reciclados"
+          alt="Residuos"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
           sizes="100vw"
         />
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1B5E20]/95 via-[#2E7D32]/85 to-[#1B5E20]/60" />
+        {/* Lighter overlay for clean look */}
+        <div className="absolute inset-0 bg-[#2E7D32]/20 backdrop-blur-[2px]" />
       </div>
 
-      {/* Floating decorative circles */}
-      <div className="absolute top-10 right-20 w-64 h-64 bg-[#4CAF50]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-40 w-48 h-48 bg-[#81C784]/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Hero Card */}
+      <div className="relative z-10 w-[90%] max-w-2xl bg-white rounded-3xl shadow-2xl p-8 sm:p-10 text-center animate-fade-in-up">
+        <h1 className="text-3xl sm:text-5xl font-black text-[#212121] leading-tight tracking-tight mb-4">
+          Conseguí materiales <br />
+          <span className="text-[#2E7D32]">para tu negocio.</span>
+        </h1>
+        <p className="text-sm sm:text-base text-[#616161] font-medium mb-8 max-w-lg mx-auto">
+          Cientos de empresas están ofreciendo sus residuos como materia prima. Recogé hoy mismo o solicitá envío.
+        </p>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-2xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-            <Recycle size={14} className="text-[#81C784]" />
-            <span className="text-white/90 text-sm font-medium">
-              Economía circular para tu negocio
-            </span>
+        {/* Search bar */}
+        <form onSubmit={handleSearch} className="flex items-center w-full max-w-lg mx-auto bg-gray-50 border border-gray-200 rounded-full shadow-inner focus-within:bg-white focus-within:ring-2 focus-within:ring-[#81C784] focus-within:border-[#81C784] transition-all overflow-hidden">
+          <div className="pl-5 pr-2 py-4 text-gray-400 border-r border-gray-200 hidden sm:flex items-center gap-2">
+            <MapPin size={18} />
+            <span className="text-xs font-bold whitespace-nowrap text-[#212121]">Tu Zona</span>
           </div>
-
-          {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
-            Convierte residuos{' '}
-            <span className="text-[#81C784]">en recursos</span>
-          </h1>
-
-          <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-xl">
-            Conectamos restaurantes, hoteles y empresas con compradores, recicladores y
-            compostadores. Dale valor a lo que otros descartan.
-          </p>
-
-          {/* Search bar */}
-          <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 max-w-lg">
-            <div className="relative flex-1">
-              <Search
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                size={18}
-              />
-              <input
-                id="hero-search"
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="¿Qué residuo buscás?"
-                className="w-full pl-11 pr-4 py-4 bg-white/95 text-[#212121] placeholder-gray-400 rounded-2xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#81C784] shadow-xl"
-              />
-            </div>
-            <Button
-              type="submit"
-              variant="primary"
-              size="lg"
-              iconRight={<ArrowRight size={18} />}
-              className="!rounded-2xl !bg-white !text-[#2E7D32] hover:!bg-[#F1F8E9] !shadow-xl whitespace-nowrap"
-            >
-              Buscar
-            </Button>
-          </form>
-
-          {/* Quick links */}
-          <div className="flex flex-wrap gap-2 mt-5">
-            {['Orgánicos', 'Plásticos', 'Madera', 'Metales'].map((cat) => (
-              <button
-                key={cat}
-                onClick={() => router.push(`${ROUTES.explorar}?categoria=${cat.toLowerCase()}`)}
-                className="px-3 py-1.5 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full text-white/80 text-xs font-medium transition-all duration-200 cursor-pointer"
-              >
-                {cat}
-              </button>
-            ))}
+          
+          <div className="flex-1 flex items-center px-4">
+            <input
+              id="hero-search"
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Ej: Madera, Plástico, Orgánicos..."
+              className="w-full bg-transparent text-[#212121] placeholder-gray-500 text-base font-medium focus:outline-none py-4"
+            />
           </div>
-        </div>
+          
+          <button
+            type="submit"
+            className="h-full bg-[#2E7D32] hover:bg-[#1B5E20] text-white px-6 py-4 font-bold transition-colors cursor-pointer"
+          >
+            Buscar
+          </button>
+        </form>
       </div>
     </section>
   );
