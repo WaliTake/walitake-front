@@ -84,11 +84,8 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} {APP_NAME}. Todos los derechos reservados.
-          </p>
           <p className="text-sm text-gray-500 flex items-center gap-1.5">
-            Hecho con <Heart size={13} className="text-[#81C784] fill-current" /> en Argentina
+            Hecho con <Heart size={13} className="text-[#81C784] fill-current" /> en Bolivia
           </p>
         </div>
       </div>

@@ -1,85 +1,143 @@
-import json
-import os
+import datetime
+import random
 from sqlalchemy.orm import Session
-from .database import SessionLocal, engine, Base
+from .database import SessionLocal, engine
 from . import models
 
-# Re-create tables
-print("Dropping and recreating tables...")
-Base.metadata.drop_all(bind=engine)
-Base.metadata.create_all(bind=engine)
-
-def load_json(filename):
-    # We will just use the mock data from the frontend files by extracting them
-    # Since they are TS files, we can't easily import them.
-    pass
-
-# For simplicity, we hardcode the initial data here directly mirroring the frontend mocks.
-categories = [
-  { "id": "cat-org", "name": "Orgánicos", "icon": "Leaf", "color": "bg-emerald-100", "text_color": "text-emerald-700", "description": "Restos de comida, café, poda" },
-  { "id": "cat-pla", "name": "Plásticos", "icon": "Recycle", "color": "bg-blue-100", "text_color": "text-blue-700", "description": "Botellas PET, tapitas, envases" },
-  { "id": "cat-met", "name": "Metales", "icon": "Wrench", "color": "bg-gray-200", "text_color": "text-gray-700", "description": "Aluminio, cobre, chatarra" },
-  { "id": "cat-pap", "name": "Papel y Cartón", "icon": "FileText", "color": "bg-amber-100", "text_color": "text-amber-700", "description": "Cajas, papel de oficina, diarios" },
-  { "id": "cat-vid", "name": "Vidrio", "icon": "Wine", "color": "bg-teal-100", "text_color": "text-teal-700", "description": "Botellas, frascos, vidrio roto" },
-  { "id": "cat-ele", "name": "Electrónicos", "icon": "Monitor", "color": "bg-indigo-100", "text_color": "text-indigo-700", "description": "RAEE, cables, plaquetas" },
-  { "id": "cat-mad", "name": "Madera", "icon": "TreePine", "color": "bg-orange-100", "text_color": "text-orange-700", "description": "Pallets, recortes, aserrín" },
-  { "id": "cat-tex", "name": "Textiles", "icon": "Shirt", "color": "bg-pink-100", "text_color": "text-pink-700", "description": "Retazos, ropa en desuso" },
-  { "id": "cat-ace", "name": "Aceites", "icon": "Droplets", "color": "bg-yellow-100", "text_color": "text-yellow-700", "description": "AVUs, aceites industriales" },
-  { "id": "cat-qui", "name": "Químicos", "icon": "FlaskConical", "color": "bg-purple-100", "text_color": "text-purple-700", "description": "Solventes, pinturas, baterías" }
-]
-
-users = [
-  { "id": "usr-1", "name": "Martín Silva", "email": "usuario@walitake.com", "phone": "+54 11 4567-8901", "joined_at": "2024-01-15T10:00:00Z" },
-  { "id": "usr-2", "name": "Laura Gómez", "email": "laura@maderera.com", "phone": "+54 261 456-7890", "joined_at": "2024-02-20T14:30:00Z" },
-  { "id": "usr-3", "name": "Carlos Ruiz", "email": "carlos@hotelcentro.com", "phone": "+54 351 123-4567", "joined_at": "2024-03-05T09:15:00Z" }
-]
-
-businesses = [
-  { "id": "biz-1", "name": "Restaurante El Verde", "description": "Gastronomía sustentable con foco en ingredientes locales y reducción de desperdicios.", "address": "Av. Corrientes 1234", "city": "Buenos Aires", "phone": "+54 11 1234-5678", "type": "restaurante", "verified": True, "rating": 4.8, "user_id": "usr-1" },
-  { "id": "biz-2", "name": "Maderera Los Pinos", "description": "Aserradero y carpintería industrial. Generamos despuntes y aserrín de maderas nobles.", "address": "Ruta 40 Km 15", "city": "Mendoza", "phone": "+54 261 987-6543", "type": "fabrica", "verified": True, "rating": 4.5, "user_id": "usr-2" },
-  { "id": "biz-3", "name": "Hotel Centro", "description": "Hotel 4 estrellas comprometido con la sustentabilidad y el reciclaje de sus residuos.", "address": "San Martín 456", "city": "Córdoba", "phone": "+54 351 234-5678", "type": "hotel", "verified": False, "rating": 4.2, "user_id": "usr-3" }
-]
-
-listings = [
-  { "id": "lst-1", "title": "Restos orgánicos de cocina", "description": "Cáscaras de frutas, verduras y borra de café. Ideal para compostaje. Se generan diariamente.", "category_id": "cat-org", "quantity": 15, "unit": "kg", "price": 0, "image_url": "https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&q=80", "business_id": "biz-1", "available": True, "created_at": "2024-03-10T10:00:00Z", "featured": True, "tags": "compost,organico,cafe" },
-  { "id": "lst-2", "title": "Pallets de madera (Descarte)", "description": "Pallets de pino rotos, no aptos para carga pero perfectos para desarmar o leña. Hay que retirarlos.", "category_id": "cat-mad", "quantity": 40, "unit": "unidades", "price": 0, "image_url": "https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&q=80", "business_id": "biz-2", "available": True, "created_at": "2024-03-12T14:30:00Z", "featured": True, "tags": "pallets,madera,leña" },
-  { "id": "lst-3", "title": "Aceite Vegetal Usado (AVU)", "description": "Aceite de freidora filtrado, en bidones de 20 litros. Listo para planta de biodiesel.", "category_id": "cat-ace", "quantity": 60, "unit": "litros", "price": 500, "image_url": "https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?auto=format&fit=crop&q=80", "business_id": "biz-1", "available": True, "created_at": "2024-03-14T09:15:00Z", "featured": False, "tags": "avu,aceite,biodiesel" },
-  { "id": "lst-4", "title": "Cartón corrugado limpio", "description": "Cajas de embalaje desarmadas y atadas. Limpias y secas.", "category_id": "cat-pap", "quantity": 120, "unit": "kg", "price": 150, "image_url": "https://images.unsplash.com/photo-1606166187734-a4cb7407ca01?auto=format&fit=crop&q=80", "business_id": "biz-3", "available": True, "created_at": "2024-03-15T11:00:00Z", "featured": False, "tags": "carton,reciclaje,embalaje" },
-  { "id": "lst-5", "title": "Botellas PET transparentes", "description": "Botellas de agua mineral aplastadas. Separadas por color.", "category_id": "cat-pla", "quantity": 200, "unit": "kg", "price": 250, "image_url": "https://images.unsplash.com/photo-1528323273322-d81458248d40?auto=format&fit=crop&q=80", "business_id": "biz-3", "available": True, "created_at": "2024-03-15T16:20:00Z", "featured": False, "tags": "pet,plastico,botellas" },
-  { "id": "lst-6", "title": "Aserrín y viruta seca", "description": "Bolsas de aserrín de madera de pino y álamo. Sin tratamientos químicos.", "category_id": "cat-mad", "quantity": 500, "unit": "kg", "price": 0, "image_url": "https://images.unsplash.com/photo-1611145328833-28956b9c7cf8?auto=format&fit=crop&q=80", "business_id": "biz-2", "available": False, "created_at": "2024-03-11T08:00:00Z", "featured": False, "tags": "aserrin,viruta,pino" },
-  { "id": "lst-7", "title": "Chatarra de hierro", "description": "Recortes de chapa y perfiles de remodelación. Ideal fundición.", "category_id": "cat-met", "quantity": 350, "unit": "kg", "price": 400, "image_url": "https://images.unsplash.com/photo-1532054955743-4e334d924d54?auto=format&fit=crop&q=80", "business_id": "biz-3", "available": True, "created_at": "2024-03-16T10:45:00Z", "featured": True, "tags": "hierro,chatarra,metal" },
-  { "id": "lst-8", "title": "Frascos de vidrio (varios tamaños)", "description": "Frascos de conservas limpios sin etiquetas. Perfectos para emprendedores de mermeladas.", "category_id": "cat-vid", "quantity": 300, "unit": "unidades", "price": 0, "image_url": "https://images.unsplash.com/photo-1542617714-c116492dc0cc?auto=format&fit=crop&q=80", "business_id": "biz-1", "available": True, "created_at": "2024-03-16T14:30:00Z", "featured": False, "tags": "vidrio,frascos,reutilizacion" },
-  { "id": "lst-9", "title": "Cables de cobre pelados", "description": "Cobre de primera calidad, sin vaina plástica. Sobrantes de obra eléctrica.", "category_id": "cat-met", "quantity": 45, "unit": "kg", "price": 8500, "image_url": "https://images.unsplash.com/photo-1558455823-c9ceb55d9d95?auto=format&fit=crop&q=80", "business_id": "biz-2", "available": True, "created_at": "2024-03-17T09:00:00Z", "featured": True, "tags": "cobre,cables,metal" },
-  { "id": "lst-10", "title": "Monitores CRT antiguos", "description": "Monitores de PC fuera de uso. Para desarme y recuperación de metales y plaquetas.", "category_id": "cat-ele", "quantity": 12, "unit": "unidades", "price": 0, "image_url": "https://images.unsplash.com/photo-1550005973-740f1f24e0f1?auto=format&fit=crop&q=80", "business_id": "biz-3", "available": True, "created_at": "2024-03-17T11:15:00Z", "featured": False, "tags": "raee,monitores,electronica" }
-]
+def reset_db():
+    models.Base.metadata.drop_all(bind=engine)
+    models.Base.metadata.create_all(bind=engine)
 
 def seed_db():
     db = SessionLocal()
-    try:
-        print("Seeding Categories...")
-        for c in categories:
-            db.add(models.Category(**c))
+
+    # 1. Categories
+    cats = [
+        {"id": "madera", "name": "Madera", "icon": "TreePine", "color": "bg-[#EFEBE9]", "text_color": "text-[#5D4037]", "description": "Pallets, recortes, aserrín y derivados."},
+        {"id": "organico", "name": "Orgánicos", "icon": "Leaf", "color": "bg-[#E8F5E9]", "text_color": "text-[#2E7D32]", "description": "Restos de comida, cáscaras, borra de café."},
+        {"id": "carton", "name": "Cartón/Papel", "icon": "Package", "color": "bg-[#FFF3E0]", "text_color": "text-[#E65100]", "description": "Cajas, maples, bobinas y papel picado."},
+        {"id": "plastico", "name": "Plásticos", "icon": "Recycle", "color": "bg-[#E3F2FD]", "text_color": "text-[#1565C0]", "description": "PET, tapitas, bidones y film stretch."},
+        {"id": "vidrio", "name": "Vidrio", "icon": "Wine", "color": "bg-[#F3E5F5]", "text_color": "text-[#6A1B9A]", "description": "Botellas, frascos y vidrio molido."},
+        {"id": "metal", "name": "Metales", "icon": "Wrench", "color": "bg-[#ECEFF1]", "text_color": "text-[#455A64]", "description": "Latas, viruta, retazos de aluminio/hierro."}
+    ]
+    
+    for c in cats:
+        db.add(models.Category(**c))
+    
+    # 2. 10 Users
+    user_emails = [
+        "usuario@walitake.com",
+        "jose@walitake.com",
+        "juan@walitake.com",
+        "maria@walitake.com",
+        "carlos@walitake.com",
+        "ana@walitake.com",
+        "luis@walitake.com",
+        "marta@walitake.com",
+        "pedro@walitake.com",
+        "sofia@walitake.com"
+    ]
+    users = []
+    for i in range(1, 11):
+        email = user_emails[i-1]
+        u = models.User(
+            id=f"user-{i}",
+            name=f"Usuario Test {i}" if i != 1 else "Demo Usuario",
+            email=email,
+            phone=f"11 5555 {1000+i}",
+            xp=random.choice([0, 50, 100, 200, 500])
+        )
+        users.append(u)
+        db.add(u)
         
-        print("Seeding Users...")
-        for u in users:
-            db.add(models.User(**u))
-            
-        print("Seeding Businesses...")
-        for b in businesses:
-            db.add(models.Business(**b))
-            
-        print("Seeding Listings...")
-        for l in listings:
-            db.add(models.WasteListing(**l))
-            
-        db.commit()
-        print("Database seeded successfully!")
+    db.commit()
+    
+    # 3. 6 Businesses (Users 1 to 6 own them)
+    businesses = []
+    business_names = ["EcoMaderas S.A.", "Restaurante Verde", "Fábrica Plástica", "Impresos del Sur", "Metalúrgica San Jorge", "Cafetería Central"]
+    cities = ["Capital Federal", "Córdoba", "Rosario", "Mendoza", "La Plata", "Mar del Plata"]
+    types = ["Carpintería", "Gastronomía", "Industria", "Imprenta", "Metalúrgica", "Gastronomía"]
+    
+    for i in range(6):
+        b = models.Business(
+            id=f"biz-{i+1}",
+            name=business_names[i],
+            description=f"Empresa de {types[i]} comprometida con la sustentabilidad.",
+            address=f"Calle Falsa {100 + i*10}",
+            city=cities[i],
+            phone=f"0800-eco-{i}",
+            type=types[i],
+            verified=True,
+            rating=round(random.uniform(4.0, 5.0), 1),
+            user_id=f"user-{i+1}"
+        )
+        businesses.append(b)
+        db.add(b)
         
-    except Exception as e:
-        db.rollback()
-        print(f"Error seeding database: {e}")
-    finally:
-        db.close()
+    db.commit()
+
+    # 4. 30 Listings from JSON
+    import json
+    import os
+    
+    json_path = os.path.join(os.path.dirname(__file__), 'productos.json')
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        
+    productos = data.get("productos", [])
+
+    # Simple category mapper
+    def guess_category(title):
+        t = title.lower()
+        if "cartón" in t or "papel" in t: return "carton"
+        elif "pet" in t or "plástico" in t or "acrílico" in t: return "plastico"
+        elif "aluminio" in t or "hierro" in t or "cobre" in t or "metálico" in t: return "metal"
+        elif "vidrio" in t: return "vidrio"
+        elif "madera" in t or "aserrín" in t or "pallets" in t: return "madera"
+        else: return "organico"
+
+    for p in productos:
+        cat_id = guess_category(p["tituloObjeto"])
+        
+        # Find business for this user email
+        owner_user = next((u for u in users if u.email == p["usuarioEmail"]), None)
+        if owner_user:
+            business = next((b for b in businesses if b.user_id == owner_user.id), businesses[0])
+        else:
+            business = businesses[0]
+            
+        original_price = p.get("costoAnteriorSinDescuento", 0)
+        discount_percent = p.get("promo", 0)
+        
+        if discount_percent and discount_percent > 0:
+            price = int(original_price * (1 - discount_percent / 100))
+        else:
+            price = original_price
+            original_price = None
+            discount_percent = None
+
+        l = models.WasteListing(
+            id=f"lst-{p['id']}",
+            title=p["tituloObjeto"],
+            description=p["descripcion"],
+            category_id=cat_id,
+            quantity=p["cantidadProducto"]["valor"],
+            unit=p["cantidadProducto"]["unidad"],
+            price=price,
+            original_price=original_price,
+            discount_percent=discount_percent,
+            image_url=p["imagen"],
+            business_id=business.id,
+            available=True,
+            featured=random.random() < 0.2, # 20% are featured
+            tags=f"{cat_id},reciclaje,industria"
+        )
+        db.add(l)
+        
+    db.commit()
+    db.close()
+    print(f"Database seeded with {len(users)} users, {len(businesses)} businesses and {len(productos)} listings successfully!")
 
 if __name__ == "__main__":
+    reset_db()
     seed_db()

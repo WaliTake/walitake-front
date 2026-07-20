@@ -12,8 +12,11 @@ import {
   Building2,
   LayoutDashboard,
   Menu,
+  ShoppingCart,
+  Award
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
+import { useCart } from '@/contexts/CartContext';
 import { Button } from '@/components/ui/Button';
 import { MobileNav } from './MobileNav';
 import { AccountDrawer } from '@/components/account/AccountDrawer';
@@ -23,6 +26,7 @@ export function Header() {
   const pathname = usePathname();
   const router = useRouter();
   const { user, logout } = useAuth();
+  const { items, setIsCartOpen } = useCart();
 
   const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -93,9 +97,33 @@ export function Header() {
                   <Search size={18} />
                 </button>
               </Link>
+              
+              <button 
+                onClick={() => setIsCartOpen(true)}
+                className="relative w-9 h-9 flex items-center justify-center rounded-full text-[#616161] hover:bg-gray-100 hover:text-[#2E7D32] transition-colors cursor-pointer"
+              >
+                <ShoppingCart size={18} />
+                {items.length > 0 && (
+                  <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#E53935] text-white text-[10px] font-bold flex items-center justify-center">
+                    {items.length}
+                  </span>
+                )}
+              </button>
 
               {user ? (
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 ml-2">
+                  {/* Gamification Bar */}
+                  <div className="hidden lg:flex items-center gap-2 px-3 py-1 bg-gray-50 border border-gray-200 rounded-full" title={`XP: ${user.xp || 0}`}>
+                    <Award size={16} className={
+                      (user.xp || 0) < 100 ? 'text-[#8D6E63]' : // Bronce
+                      (user.xp || 0) < 500 ? 'text-[#9E9E9E]' : // Plata
+                      'text-[#FFCA28]' // Oro
+                    } />
+                    <span className="text-xs font-bold text-[#616161]">
+                      {(user.xp || 0) < 100 ? 'Bronce' : (user.xp || 0) < 500 ? 'Plata' : 'Oro'}
+                    </span>
+                  </div>
+
                   <button
                     onClick={() => setDrawerOpen(true)}
                     className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#E0E0E0] hover:border-[#81C784] hover:bg-[#F1F8E9] transition-all duration-200 cursor-pointer"

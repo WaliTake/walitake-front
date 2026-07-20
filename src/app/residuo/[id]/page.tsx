@@ -5,7 +5,7 @@ import { getListingById } from '@/lib/data/listings';
 import { getBusinessById } from '@/lib/data/businesses';
 import { getCategoryById } from '@/lib/data/categories';
 import { ImageGallery } from '@/components/detail/ImageGallery';
-import { ContactSeller } from '@/components/detail/ContactSeller';
+import { AddToCart } from '@/components/detail/AddToCart';
 import { BusinessCard } from '@/components/detail/BusinessCard';
 import { Badge } from '@/components/ui/Badge';
 import { APP_NAME } from '@/lib/constants';
@@ -37,12 +37,12 @@ export default async function ResiduoDetailPage({ params }: Props) {
 
   if (!business) notFound();
 
-  const priceLabel =
-    listing.price === 0
-      ? 'Promo -25% ($2.500)'
-      : `$${listing.price.toLocaleString('es-AR')} / ${listing.unit}`;
+  const isPromo = listing.discountPercent && listing.discountPercent > 0;
+  const priceLabel = isPromo
+    ? `Promo -${listing.discountPercent}% (Bs. ${listing.price.toLocaleString('es-BO')})`
+    : `Bs. ${listing.price.toLocaleString('es-BO')} / ${listing.unit}`;
 
-  const formattedDate = new Date(listing.createdAt).toLocaleDateString('es-AR', {
+  const formattedDate = new Date(listing.createdAt).toLocaleDateString('es-BO', {
     day: '2-digit',
     month: 'long',
     year: 'numeric',
@@ -81,9 +81,9 @@ export default async function ResiduoDetailPage({ params }: Props) {
                     {category.name}
                   </Badge>
                 )}
-                {listing.price === 0 && (
+                {isPromo && (
                   <Badge variant="promo" className="bg-[#FFEB3B] text-black font-bold border-0">
-                    PROMO -25%
+                    PROMO -{listing.discountPercent}%
                   </Badge>
                 )}
                 <Badge variant={listing.available ? 'available' : 'soldout'}>
@@ -104,7 +104,7 @@ export default async function ResiduoDetailPage({ params }: Props) {
                 {
                   icon: <Package size={18} className="text-[#2E7D32]" />,
                   label: 'Cantidad',
-                  value: `${listing.quantity.toLocaleString('es-AR')} ${listing.unit}`,
+                  value: `${listing.quantity.toLocaleString('es-BO')} ${listing.unit}`,
                 },
                 {
                   icon: <Tag size={18} className="text-[#2E7D32]" />,
@@ -133,13 +133,13 @@ export default async function ResiduoDetailPage({ params }: Props) {
             </div>
 
             {/* Tags */}
-            {listing.tags && listing.tags.length > 0 && (
+            {listing.tags_list && listing.tags_list.length > 0 && (
               <div>
                 <p className="text-xs font-bold uppercase tracking-wider text-[#616161] mb-2">
                   Etiquetas
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {listing.tags.map((tag) => (
+                  {listing.tags_list.map((tag) => (
                     <span
                       key={tag}
                       className="px-3 py-1 bg-gray-100 text-[#616161] text-xs font-medium rounded-full"
@@ -158,23 +158,21 @@ export default async function ResiduoDetailPage({ params }: Props) {
             <div className="bg-white rounded-2xl border border-[#E0E0E0] shadow-sm p-5">
               <div className="flex items-baseline gap-2 mb-1">
                 <span className="text-3xl font-black text-[#212121]">
-                  {listing.price === 0 ? `$2.500` : `$${listing.price.toLocaleString('es-AR')}`}
+                  Bs. {listing.price.toLocaleString('es-BO')}
                 </span>
-                {listing.price === 0 && (
+                {isPromo && listing.originalPrice && (
                   <span className="text-sm line-through text-[#9E9E9E] font-medium ml-2">
-                    $3.330
+                    Bs. {listing.originalPrice.toLocaleString('es-BO')}
                   </span>
                 )}
-                {listing.price > 0 && (
-                  <span className="text-sm text-[#616161]">/ {listing.unit}</span>
-                )}
+                <span className="text-sm text-[#616161]">/ {listing.unit}</span>
               </div>
               <p className="text-xs text-[#616161] mb-5">
-                {listing.quantity.toLocaleString('es-AR')} {listing.unit} disponibles
+                {listing.quantity.toLocaleString('es-BO')} {listing.unit} disponibles
               </p>
 
               {listing.available ? (
-                <ContactSeller listing={listing} business={business} />
+                <AddToCart listing={listing} />
               ) : (
                 <div className="w-full py-3 bg-gray-100 text-[#616161] text-sm font-semibold rounded-full text-center">
                   Stock agotado

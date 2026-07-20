@@ -11,6 +11,7 @@ class User(Base):
     email = Column(String, unique=True, index=True)
     phone = Column(String, nullable=True)
     joined_at = Column(String, default=lambda: datetime.datetime.now().isoformat())
+    xp = Column(Integer, default=0)
 
     business = relationship("Business", back_populates="owner", uselist=False)
 
@@ -53,6 +54,8 @@ class WasteListing(Base):
     quantity = Column(Float)
     unit = Column(String)
     price = Column(Float)
+    original_price = Column(Float, nullable=True)
+    discount_percent = Column(Integer, nullable=True)
     image_url = Column(String)
     business_id = Column(String, ForeignKey("businesses.id"))
     available = Column(Boolean, default=True)

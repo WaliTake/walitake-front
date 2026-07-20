@@ -1,0 +1,425 @@
+{
+  "moneda": "BOB",
+  "productos": [
+    {
+      "id": 1,
+      "usuarioEmail": "maria@walitake.com",
+      "promo": 35,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 144.0,
+      "cantidadProducto": {
+        "valor": 120,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Cartón corrugado prensado",
+      "descripcion": "Cartón limpio proveniente de cajas de embalaje, seco y prensado. Ideal para recicladoras y fabricantes de pulpa. Recogida en Santa Cruz de la Sierra, Parque Industrial; envío local coordinable con costo adicional.",
+      "imagen": "https://loremflickr.com/1280/720/cardboard,recycling?lock=1001"
+    },
+    {
+      "id": 2,
+      "usuarioEmail": "ana@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 192.0,
+      "cantidadProducto": {
+        "valor": 80,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Botellas PET transparentes",
+      "descripcion": "Botellas PET transparentes, vacías, compactadas y sin líquidos. Las tapas se entregan separadas. Entrega en punto acordado dentro de La Paz, Miraflores o recogida directa.",
+      "imagen": "https://loremflickr.com/1280/720/plastic,bottles,recycling?lock=1002"
+    },
+    {
+      "id": 3,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 91.0,
+      "cantidadProducto": {
+        "valor": 70,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Papel blanco de oficina",
+      "descripcion": "Papel bond usado por una cara, sin plastificar y almacenado en un ambiente seco. Apto para reciclaje. Entrega en punto acordado dentro de Oruro, Zona Norte o recogida directa.",
+      "imagen": "https://loremflickr.com/1280/720/paper,waste,recycling?lock=1003"
+    },
+    {
+      "id": 4,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 390.0,
+      "cantidadProducto": {
+        "valor": 30,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Latas de aluminio compactadas",
+      "descripcion": "Latas de bebidas lavadas y compactadas. Lote homogéneo de aluminio para fundición o reciclaje. Entrega en punto acordado dentro de El Alto, Río Seco o recogida directa.",
+      "imagen": "https://loremflickr.com/1280/720/aluminum,cans,recycling?lock=1004"
+    },
+    {
+      "id": 5,
+      "usuarioEmail": "maria@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 800.0,
+      "cantidadProducto": {
+        "valor": 200,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Chatarra de hierro liviano",
+      "descripcion": "Retazos de perfiles, tubos y láminas de hierro sin residuos químicos. Material listo para clasificación. Recogida disponible en Santa Cruz de la Sierra, Parque Industrial.",
+      "imagen": "https://loremflickr.com/1280/720/iron,scrap,metal?lock=1005"
+    },
+    {
+      "id": 6,
+      "usuarioEmail": "maria@walitake.com",
+      "promo": 35,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 660.0,
+      "cantidadProducto": {
+        "valor": 12,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Retazos de cable de cobre",
+      "descripcion": "Cableado eléctrico fuera de uso con contenido de cobre. Se vende como lote, sin componentes energizados. Recogida en Santa Cruz de la Sierra, Parque Industrial; envío local coordinable con costo adicional.",
+      "imagen": "https://loremflickr.com/1280/720/copper,wire,scrap?lock=1006"
+    },
+    {
+      "id": 7,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 25,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 360.0,
+      "cantidadProducto": {
+        "valor": 300,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Botellas de vidrio retornables",
+      "descripcion": "Botellas de vidrio enteras, lavadas y clasificadas por tamaño. Útiles para reutilización o trituración. Entrega en punto acordado dentro de El Alto, Villa Adela o recogida directa.",
+      "imagen": "https://loremflickr.com/1280/720/glass,bottles,recycling?lock=1007"
+    },
+    {
+      "id": 8,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 5,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 210.0,
+      "cantidadProducto": {
+        "valor": 60,
+        "unidad": "litros"
+      },
+      "tituloObjeto": "Aceite vegetal usado filtrado",
+      "descripcion": "Aceite de cocina usado, filtrado y almacenado en bidones cerrados. Destinado a reciclaje industrial. Recogida en Oruro, Zona Norte; envío local coordinable con costo adicional.",
+      "imagen": "https://loremflickr.com/1280/720/used,cooking,oil?lock=1008"
+    },
+    {
+      "id": 9,
+      "usuarioEmail": "ana@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 180.0,
+      "cantidadProducto": {
+        "valor": 2,
+        "unidad": "m3"
+      },
+      "tituloObjeto": "Aserrín seco de carpintería",
+      "descripcion": "Aserrín de madera sin pintura, barniz ni tratamientos químicos. Útil para compostaje, camas o briquetas. Recogida disponible en La Paz, Miraflores.",
+      "imagen": "https://loremflickr.com/1280/720/sawdust,wood?lock=1009"
+    },
+    {
+      "id": 10,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 5,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 700.0,
+      "cantidadProducto": {
+        "valor": 25,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Pallets de madera usados",
+      "descripcion": "Pallets recuperados con desgaste superficial y estructura reutilizable. Algunos requieren reparación menor. Recogida disponible en El Alto, Villa Adela.",
+      "imagen": "https://loremflickr.com/1280/720/wooden,pallets?lock=1010"
+    },
+    {
+      "id": 11,
+      "usuarioEmail": "juan@walitake.com",
+      "promo": 25,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 375.0,
+      "cantidadProducto": {
+        "valor": 1.5,
+        "unidad": "m3"
+      },
+      "tituloObjeto": "Retazos de madera natural",
+      "descripcion": "Recortes de pino y madera natural, sin melamina ni pintura. Diferentes largos y espesores. Recogida en Cochabamba, Quillacollo; envío local coordinable con costo adicional.",
+      "imagen": "https://loremflickr.com/1280/720/wood,offcuts?lock=1011"
+    },
+    {
+      "id": 12,
+      "usuarioEmail": "usuario@walitake.com",
+      "promo": 35,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 176.0,
+      "cantidadProducto": {
+        "valor": 55,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Envases plásticos PEAD",
+      "descripcion": "Bidones y envases de polietileno de alta densidad, lavados y sin residuos peligrosos. Entrega en punto acordado dentro de La Paz, Zona Industrial o recogida directa.",
+      "imagen": "https://loremflickr.com/1280/720/hdpe,plastic,containers?lock=1012"
+    },
+    {
+      "id": 13,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 30,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 200.0,
+      "cantidadProducto": {
+        "valor": 400,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Sacos de polipropileno usados",
+      "descripcion": "Sacos tejidos de polipropileno limpios y secos, provenientes de productos agrícolas no peligrosos. Recogida disponible en Oruro, Zona Norte.",
+      "imagen": "https://loremflickr.com/1280/720/polypropylene,bags?lock=1013"
+    },
+    {
+      "id": 14,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 198.0,
+      "cantidadProducto": {
+        "valor": 90,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Film plástico PEBD",
+      "descripcion": "Película plástica flexible transparente, separada de etiquetas, tierra y restos orgánicos. Recogida en El Alto, Villa Adela; envío local coordinable con costo adicional.",
+      "imagen": "https://loremflickr.com/1280/720/plastic,film,recycling?lock=1014"
+    },
+    {
+      "id": 15,
+      "usuarioEmail": "usuario@walitake.com",
+      "promo": 25,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 840.0,
+      "cantidadProducto": {
+        "valor": 12,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Tambores metálicos vacíos",
+      "descripcion": "Tambores de acero vacíos, lavados y sin contenido peligroso. Aptos para reacondicionamiento. Recogida disponible en La Paz, Zona Industrial.",
+      "imagen": "https://loremflickr.com/1280/720/steel,drums?lock=1015"
+    },
+    {
+      "id": 16,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 700.0,
+      "cantidadProducto": {
+        "valor": 20,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Neumáticos usados de automóvil",
+      "descripcion": "Neumáticos fuera de uso, sin aro metálico. Aptos para reciclaje de caucho o proyectos de reutilización. Recogida disponible en El Alto, Río Seco.",
+      "imagen": "https://loremflickr.com/1280/720/used,tires,recycling?lock=1016"
+    },
+    {
+      "id": 17,
+      "usuarioEmail": "usuario@walitake.com",
+      "promo": 30,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 320.0,
+      "cantidadProducto": {
+        "valor": 100,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Retazos textiles mixtos",
+      "descripcion": "Recortes de tela de confección en colores y tamaños variados. Material seco y separado de basura común. Recogida en La Paz, Zona Industrial; envío local coordinable con costo adicional.",
+      "imagen": "https://loremflickr.com/1280/720/textile,scraps?lock=1017"
+    },
+    {
+      "id": 18,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 5,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 240.0,
+      "cantidadProducto": {
+        "valor": 60,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Retazos de algodón",
+      "descripcion": "Desperdicio limpio de algodón proveniente de corte textil. Útil como relleno o materia prima reciclada. Entrega en punto acordado dentro de El Alto, Villa Adela o recogida directa.",
+      "imagen": "https://loremflickr.com/1280/720/cotton,fabric,scraps?lock=1018"
+    },
+    {
+      "id": 19,
+      "usuarioEmail": "maria@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 240.0,
+      "cantidadProducto": {
+        "valor": 40,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Retazos de cuero natural",
+      "descripcion": "Recortes de cuero de marroquinería en tamaños pequeños y medianos, separados por color. Entrega en punto acordado dentro de Santa Cruz de la Sierra, Parque Industrial o recogida directa.",
+      "imagen": "https://loremflickr.com/1280/720/leather,scraps?lock=1019"
+    },
+    {
+      "id": 20,
+      "usuarioEmail": "usuario@walitake.com",
+      "promo": 35,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 375.0,
+      "cantidadProducto": {
+        "valor": 15,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Placas electrónicas en desuso",
+      "descripcion": "Placas de equipos electrónicos para gestor autorizado de residuos electrónicos. Sin baterías incluidas. Recogida en La Paz, Zona Industrial; envío local coordinable con costo adicional.",
+      "imagen": "https://loremflickr.com/1280/720/circuit,boards,electronic,waste?lock=1020"
+    },
+    {
+      "id": 21,
+      "usuarioEmail": "juan@walitake.com",
+      "promo": 30,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 900.0,
+      "cantidadProducto": {
+        "valor": 50,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Componentes de computación usados",
+      "descripcion": "Lote de gabinetes, fuentes, ventiladores, memorias antiguas y cables. Se vende para repuestos o reciclaje. Recogida disponible en Cochabamba, Quillacollo.",
+      "imagen": "https://loremflickr.com/1280/720/computer,parts,electronic,waste?lock=1021"
+    },
+    {
+      "id": 22,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 35,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 300.0,
+      "cantidadProducto": {
+        "valor": 500,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Bagazo de cebada cervecera",
+      "descripcion": "Bagazo húmedo fresco generado en producción cervecera. Recomendado para retiro el mismo día. Recogida disponible en Oruro, Zona Norte.",
+      "imagen": "https://loremflickr.com/1280/720/brewing,grain,waste?lock=1022"
+    },
+    {
+      "id": 23,
+      "usuarioEmail": "juan@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 120.0,
+      "cantidadProducto": {
+        "valor": 120,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Borra de café para compostaje",
+      "descripcion": "Café molido usado, recolectado diariamente y sin mezcla con plásticos. Ideal para compostaje. Entrega en punto acordado dentro de Cochabamba, Quillacollo o recogida directa.",
+      "imagen": "https://loremflickr.com/1280/720/coffee,grounds,compost?lock=1023"
+    },
+    {
+      "id": 24,
+      "usuarioEmail": "ana@walitake.com",
+      "promo": 5,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 180.0,
+      "cantidadProducto": {
+        "valor": 400,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Residuos de frutas y verduras",
+      "descripcion": "Restos vegetales separados en origen, sin carne, aceites ni envases. Aptos para compostaje o biodigestión. Recogida en La Paz, Miraflores; envío local coordinable con costo adicional.",
+      "imagen": "https://loremflickr.com/1280/720/fruit,vegetable,waste?lock=1024"
+    },
+    {
+      "id": 25,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 5,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 180.0,
+      "cantidadProducto": {
+        "valor": 1.8,
+        "unidad": "m3"
+      },
+      "tituloObjeto": "Estiércol compostable",
+      "descripcion": "Estiércol de ganado mezclado con material vegetal seco. Producto sin tratamiento químico. Entrega en punto acordado dentro de El Alto, Río Seco o recogida directa.",
+      "imagen": "https://loremflickr.com/1280/720/manure,compost?lock=1025"
+    },
+    {
+      "id": 26,
+      "usuarioEmail": "ana@walitake.com",
+      "promo": 35,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 120.0,
+      "cantidadProducto": {
+        "valor": 80,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Cáscaras de huevo trituradas",
+      "descripcion": "Cáscaras de huevo limpias, secas y trituradas. Útiles para compostaje y enmiendas de suelo. Recogida en La Paz, Miraflores; envío local coordinable con costo adicional.",
+      "imagen": "https://loremflickr.com/1280/720/eggshells,compost?lock=1026"
+    },
+    {
+      "id": 27,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 25,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 240.0,
+      "cantidadProducto": {
+        "valor": 3,
+        "unidad": "m3"
+      },
+      "tituloObjeto": "Ladrillos recuperados",
+      "descripcion": "Ladrillos enteros y fragmentos provenientes de una remodelación, separados de yeso y basura. Recogida disponible en El Alto, Villa Adela.",
+      "imagen": "https://loremflickr.com/1280/720/bricks,reclaimed?lock=1027"
+    },
+    {
+      "id": 28,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 30,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 300.0,
+      "cantidadProducto": {
+        "valor": 5,
+        "unidad": "m3"
+      },
+      "tituloObjeto": "Escombros de concreto limpio",
+      "descripcion": "Concreto y piedra sin madera, plástico ni residuos peligrosos. Apto para relleno y trituración. Recogida en El Alto, Río Seco; envío local coordinable con costo adicional.",
+      "imagen": "https://loremflickr.com/1280/720/concrete,rubble?lock=1028"
+    },
+    {
+      "id": 29,
+      "usuarioEmail": "juan@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 160.0,
+      "cantidadProducto": {
+        "valor": 1,
+        "unidad": "m3"
+      },
+      "tituloObjeto": "Retazos de cerámica",
+      "descripcion": "Sobrantes y piezas con defectos de baldosas cerámicas. Útiles para mosaicos, relleno o trituración. Recogida en Cochabamba, Quillacollo; envío local coordinable con costo adicional.",
+      "imagen": "https://loremflickr.com/1280/720/ceramic,tiles,scraps?lock=1029"
+    },
+    {
+      "id": 30,
+      "usuarioEmail": "usuario@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 225.0,
+      "cantidadProducto": {
+        "valor": 45,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Retazos de lámina acrílica",
+      "descripcion": "Recortes de acrílico transparente y de color, sin adhesivos ni mezcla con otros plásticos. Recogida en La Paz, Zona Industrial; envío local coordinable con costo adicional.",
+      "imagen": "https://loremflickr.com/1280/720/acrylic,plastic,sheets?lock=1030"
+    }
+  ]
+}

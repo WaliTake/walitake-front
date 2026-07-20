@@ -1,6 +1,6 @@
 # walitake 🌱
 
-**Marketplace de residuos** – conecta generadores (restaurantes, hoteles, fábricas) con compradores y recicladores. Economía circular para Argentina.
+**Marketplace de residuos** – conecta generadores (restaurantes, hoteles, fábricas) con compradores y recicladores. Economía circular para Bolivia.
 
 ## Stack
 

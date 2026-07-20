@@ -4,6 +4,8 @@ import './globals.css';
 import { Providers } from './providers';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { CartProvider } from '@/contexts/CartContext';
+import { CartDrawer } from '@/components/layout/CartDrawer';
 import { APP_NAME, APP_DESCRIPTION } from '@/lib/constants';
 
 const inter = Inter({
@@ -39,9 +41,12 @@ export default function RootLayout({
     <html lang="es" className={inter.variable}>
       <body className="min-h-screen flex flex-col bg-white text-[#212121] font-sans antialiased">
         <Providers>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <CartProvider>
+            <Header />
+            <CartDrawer />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </CartProvider>
         </Providers>
       </body>
     </html>

@@ -113,8 +113,8 @@ export function MyListings({ initialListings }: MyListingsProps) {
                 </div>
 
                 <p className="text-xs text-[#616161] mt-1.5">
-                  {listing.quantity.toLocaleString('es-AR')} {listing.unit}
-                  {listing.price > 0 && ` · $${listing.price.toLocaleString('es-AR')}`}
+                  {listing.quantity.toLocaleString('es-BO')} {listing.unit}
+                  {listing.price > 0 && ` · Bs. ${listing.price.toLocaleString('es-BO')}`}
                 </p>
               </div>
 

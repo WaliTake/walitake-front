@@ -30,6 +30,7 @@ class UserCreate(UserBase):
 class User(UserBase):
     id: str
     joined_at: str
+    xp: int
     class Config:
         from_attributes = True
 
@@ -63,6 +64,8 @@ class WasteListingBase(BaseModel):
     quantity: float
     unit: str
     price: float
+    original_price: Optional[float] = None
+    discount_percent: Optional[int] = None
     image_url: str
     available: bool = True
     featured: bool = False

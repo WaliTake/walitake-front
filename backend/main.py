@@ -180,3 +180,33 @@ def register(user: schemas.UserCreate, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(db_user)
     return db_user
+
+@app.get("/users/{user_id}", response_model=schemas.User)
+def get_user(user_id: str, db: Session = Depends(get_db)):
+    user = db.query(models.User).filter(models.User.id == user_id).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user
+
+class CheckoutRequest(schemas.BaseModel):
+    user_id: str
+    listing_ids: List[str]
+
+@app.post("/checkout")
+def checkout(req: CheckoutRequest, db: Session = Depends(get_db)):
+    user = db.query(models.User).filter(models.User.id == req.user_id).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+        
+    listings = db.query(models.WasteListing).filter(models.WasteListing.id.in_(req.listing_ids)).all()
+    
+    # Mark as unavailable
+    for l in listings:
+        l.available = False
+        
+    # Gamification: 50 XP per item bought
+    earned_xp = len(req.listing_ids) * 50
+    user.xp += earned_xp
+    
+    db.commit()
+    return {"message": "Checkout successful", "earned_xp": earned_xp, "new_total_xp": user.xp}

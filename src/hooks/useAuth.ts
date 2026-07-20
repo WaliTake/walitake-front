@@ -28,42 +28,77 @@ export function createAuthActions(
 ) {
   const login = async (email: string, password: string): Promise<{ success: boolean; error?: string }> => {
     setIsLoading(true);
-    await delay(800);
 
-    const isValidCredentials =
-      (email === MOCK_CREDENTIALS.email && password === MOCK_CREDENTIALS.password) ||
-      mockUsers.some((u) => u.email === email);
+    try {
+      const res = await fetch('http://localhost:8000/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
 
-    if (!isValidCredentials) {
-      setIsLoading(false);
-      return {
-        success: false,
-        error: 'Email o contraseña incorrectos. Prueba con usuario@walitake.com / eco2024',
+      if (!res.ok) {
+        setIsLoading(false);
+        return {
+          success: false,
+          error: 'Email o contraseña incorrectos. Verifica tus credenciales.',
+        };
+      }
+
+      const data = await res.json();
+      
+      const foundUser: User = {
+        id: data.id,
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        xp: data.xp,
+        joinedAt: new Date().toISOString().split('T')[0],
       };
-    }
 
-    const foundUser = mockUsers.find((u) => u.email === email) ?? mockUsers[0];
-    setUser(foundUser);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(foundUser));
-    setIsLoading(false);
-    return { success: true };
+      setUser(foundUser);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(foundUser));
+      setIsLoading(false);
+      return { success: true };
+    } catch (err) {
+      setIsLoading(false);
+      return { success: false, error: 'Error de red' };
+    }
   };
 
   const register = async (name: string, email: string, _password: string): Promise<{ success: boolean; error?: string }> => {
     setIsLoading(true);
-    await delay(1000);
 
-    const newUser: User = {
-      id: `user-${Date.now()}`,
-      name,
-      email,
-      joinedAt: new Date().toISOString().split('T')[0],
-    };
+    try {
+      const res = await fetch('http://localhost:8000/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone: '000000000' })
+      });
 
-    setUser(newUser);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(newUser));
-    setIsLoading(false);
-    return { success: true };
+      if (!res.ok) {
+        setIsLoading(false);
+        return { success: false, error: 'Error al registrarse. El email puede que ya exista.' };
+      }
+
+      const data = await res.json();
+      
+      const newUser: User = {
+        id: data.id,
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        xp: data.xp || 0,
+        joinedAt: new Date().toISOString().split('T')[0],
+      };
+
+      setUser(newUser);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(newUser));
+      setIsLoading(false);
+      return { success: true };
+    } catch (err) {
+      setIsLoading(false);
+      return { success: false, error: 'Error de red' };
+    }
   };
 
   const logout = () => {

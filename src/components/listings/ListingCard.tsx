@@ -7,6 +7,7 @@ import { ROUTES } from '@/lib/constants';
 import type { WasteListing } from '@/lib/types';
 import { Badge } from '@/components/ui/Badge';
 import { useState } from 'react';
+import { useCart } from '@/contexts/CartContext';
 import { toast } from 'react-hot-toast';
 
 interface ListingCardProps {
@@ -15,22 +16,22 @@ interface ListingCardProps {
 }
 
 export function ListingCard({ listing, animDelay = 0 }: ListingCardProps) {
-  const isPromo = listing.price === 0;
-  
-  // Simulated promotion tags (could come from backend later)
+  const { addToCart } = useCart();
+  const isPromo = listing.discountPercent && listing.discountPercent > 0;
   const isFeatured = listing.featured;
   const isOportunidad = listing.quantity > 100 && !isPromo;
 
   const [adding, setAdding] = useState(false);
 
   const handleAdd = (e: React.MouseEvent) => {
-    e.preventDefault(); // Prevent navigating to details
+    e.preventDefault();
     e.stopPropagation();
     
     setAdding(true);
     setTimeout(() => {
+      addToCart(listing);
       setAdding(false);
-      toast.success(`${listing.title} agregado a solicitudes`);
+      toast.success(`${listing.title} agregado al carrito`);
     }, 400);
   };
 
@@ -44,7 +45,7 @@ export function ListingCard({ listing, animDelay = 0 }: ListingCardProps) {
       <div className="absolute top-2 left-2 z-10 flex flex-col gap-1 items-start">
         {isPromo && (
           <span className="bg-[#FFEB3B] text-black text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">
-            PROMO -25%
+            PROMO -{listing.discountPercent}%
           </span>
         )}
         {isFeatured && (
@@ -82,12 +83,12 @@ export function ListingCard({ listing, animDelay = 0 }: ListingCardProps) {
         {/* Price & Add Button */}
         <div className="flex items-start justify-between mt-1 mb-1.5">
           <div className="flex flex-col">
-            <span className="text-lg font-extrabold text-[#212121]">
-              {isPromo ? `$2.500` : `$${listing.price.toLocaleString('es-AR')}`}
+            <span className="text-xl font-black text-[#212121]">
+              Bs. {listing.price.toLocaleString('es-BO')}
             </span>
-            {isPromo && (
-              <span className="text-[11px] line-through text-[#9E9E9E] font-medium -mt-0.5">
-                $3.330
+            {isPromo && listing.originalPrice && (
+              <span className="text-sm line-through text-[#9E9E9E] font-medium mt-0.5">
+                Bs. {listing.originalPrice.toLocaleString('es-BO')}
               </span>
             )}
             <span className="text-[11px] text-[#757575] font-medium uppercase tracking-wider mt-0.5">
