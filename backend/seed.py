@@ -14,7 +14,7 @@ def seed_db():
     # 1. Categories
     cats = [
         {"id": "madera", "name": "Madera", "icon": "TreePine", "color": "bg-[#EFEBE9]", "text_color": "text-[#5D4037]", "description": "Pallets, recortes, aserrín y derivados."},
-        {"id": "organico", "name": "Orgánicos", "icon": "Leaf", "color": "bg-[#E8F5E9]", "text_color": "text-[#2E7D32]", "description": "Restos de comida, cáscaras, borra de café."},
+        {"id": "organico", "name": "Orgánicos y más", "icon": "Leaf", "color": "bg-[#E8F5E9]", "text_color": "text-[#2E7D32]", "description": "Restos de comida, cáscaras, borra de café."},
         {"id": "carton", "name": "Cartón/Papel", "icon": "Package", "color": "bg-[#FFF3E0]", "text_color": "text-[#E65100]", "description": "Cajas, maples, bobinas y papel picado."},
         {"id": "plastico", "name": "Plásticos", "icon": "Recycle", "color": "bg-[#E3F2FD]", "text_color": "text-[#1565C0]", "description": "PET, tapitas, bidones y film stretch."},
         {"id": "vidrio", "name": "Vidrio", "icon": "Wine", "color": "bg-[#F3E5F5]", "text_color": "text-[#6A1B9A]", "description": "Botellas, frascos y vidrio molido."},
