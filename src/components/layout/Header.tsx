@@ -30,8 +30,7 @@ export function Header() {
 
   // Dynamic nav links based on auth
   const navLinks = [
-    { href: ROUTES.home, label: 'Inicio', show: !user },
-    { href: ROUTES.feed, label: 'Feed', show: !!user },
+    { href: ROUTES.home, label: 'Inicio', show: true },
     { href: ROUTES.explorar, label: 'Explorar', show: true },
   ].filter((l) => l.show);
 
@@ -60,7 +59,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link href={user ? ROUTES.feed : ROUTES.home} className="flex items-center gap-2 group">
+            <Link href={ROUTES.home} className="flex items-center gap-2 group">
               <div className="w-9 h-9 bg-[#2E7D32] rounded-xl flex items-center justify-center shadow-sm group-hover:bg-[#4CAF50] transition-colors duration-200">
                 <Leaf className="text-white" size={20} />
               </div>

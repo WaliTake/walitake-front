@@ -132,7 +132,7 @@ export function NewListingForm() {
               onChange={(e) => setIsFree(e.target.checked)}
               className="accent-[#2E7D32]"
             />
-            <span className="text-sm text-[#2E7D32] font-semibold">Gratis</span>
+            <span className="text-sm text-[#2E7D32] font-semibold">Ofrecer como Promo</span>
           </label>
         </div>
         <div className="relative">

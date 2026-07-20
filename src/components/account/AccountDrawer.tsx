@@ -195,7 +195,7 @@ function ResiduosTab({ listings: initial, dataLoading }: { listings: WasteListin
                   {l.available ? 'Disponible' : 'Agotado'}
                 </Badge>
               </div>
-              <p className="text-xs text-[#616161] mt-0.5">{l.quantity} {l.unit} · {l.price === 0 ? 'Gratis' : `$${l.price}`}</p>
+              <p className="text-xs text-[#616161] mt-0.5">{l.quantity} {l.unit} · {l.price === 0 ? 'Promo -25% ($2.500)' : `$${l.price}`}</p>
             </div>
             <div className="flex flex-col gap-1 shrink-0">
               <button onClick={() => toggle(l.id)} title="Cambiar estado" className="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-[#F1F8E9] text-[#616161] hover:text-[#2E7D32] transition-colors cursor-pointer">

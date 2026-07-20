@@ -1,112 +1,121 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Package, Building2, ArrowRight } from 'lucide-react';
-import { Badge } from '@/components/ui/Badge';
-import { ListingCardSkeleton } from '@/components/ui/Skeleton';
-import type { WasteListing, Business, Category } from '@/lib/types';
-import { mockCategories } from '@/lib/data/categories';
-import { mockBusinesses } from '@/lib/data/businesses';
+import Link from 'next/link';
+import { Plus, Tag } from 'lucide-react';
 import { ROUTES } from '@/lib/constants';
+import type { WasteListing } from '@/lib/types';
+import { Badge } from '@/components/ui/Badge';
+import { useState } from 'react';
+import { toast } from 'react-hot-toast';
 
 interface ListingCardProps {
   listing: WasteListing;
-  business?: Business;
-  category?: Category;
   animDelay?: number;
 }
 
-export { ListingCardSkeleton };
+export function ListingCard({ listing, animDelay = 0 }: ListingCardProps) {
+  const isPromo = listing.price === 0;
+  
+  // Simulated promotion tags (could come from backend later)
+  const isFeatured = listing.featured;
+  const isOportunidad = listing.quantity > 100 && !isPromo;
 
-export function ListingCard({ listing, business, category, animDelay = 0 }: ListingCardProps) {
-  const biz = business ?? mockBusinesses.find((b) => b.id === listing.businessId);
-  const cat = category ?? mockCategories.find((c) => c.id === listing.categoryId);
+  const [adding, setAdding] = useState(false);
 
-  const priceLabel =
-    listing.price === 0
-      ? 'Gratis'
-      : `$${listing.price.toLocaleString('es-AR')} / ${listing.unit}`;
+  const handleAdd = (e: React.MouseEvent) => {
+    e.preventDefault(); // Prevent navigating to details
+    e.stopPropagation();
+    
+    setAdding(true);
+    setTimeout(() => {
+      setAdding(false);
+      toast.success(`${listing.title} agregado a solicitudes`);
+    }, 400);
+  };
 
   return (
-    <Link
+    <Link 
       href={ROUTES.residuo(listing.id)}
-      className="group bg-white rounded-2xl overflow-hidden border border-[#E0E0E0] shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col"
-      style={{ animationDelay: `${animDelay}ms` }}
-      aria-label={`Ver detalle de ${listing.title}`}
+      className="group flex flex-col h-full animate-fade-in relative transition-transform hover:-translate-y-1 hover:shadow-lg bg-white rounded-2xl overflow-hidden border border-gray-100"
+      style={{ animationDelay: `${animDelay}ms`, animationFillMode: 'both' }}
     >
-      {/* Image */}
-      <div className="relative h-48 overflow-hidden bg-gray-100">
+      {/* Top badges */}
+      <div className="absolute top-2 left-2 z-10 flex flex-col gap-1 items-start">
+        {isPromo && (
+          <span className="bg-[#FFEB3B] text-black text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">
+            PROMO -25%
+          </span>
+        )}
+        {isFeatured && (
+          <span className="bg-[#FF9800] text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm flex items-center gap-1">
+            <Tag size={10} /> DESTACADO
+          </span>
+        )}
+        {isOportunidad && (
+          <span className="bg-[#2E7D32] text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">
+            OPORTUNIDAD
+          </span>
+        )}
+      </div>
+
+      {/* Image container */}
+      <div className="relative aspect-square w-full bg-gray-50 overflow-hidden">
         <Image
           src={listing.imageUrl}
           alt={listing.title}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className={`object-cover transition-transform duration-500 group-hover:scale-105 ${!listing.available ? 'opacity-50 grayscale' : ''}`}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
-
-        {/* Overlay badges */}
-        <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
-          {listing.price === 0 && (
-            <Badge variant="free">Gratis</Badge>
-          )}
-          {!listing.available && (
-            <Badge variant="soldout">Agotado</Badge>
-          )}
-        </div>
-
-        {/* Category badge top-right */}
-        {cat && (
-          <div className="absolute top-3 right-3">
-            <Badge
-              variant="category"
-              categoryColor={cat.color}
-              categoryText={cat.textColor}
-            >
-              {cat.name}
-            </Badge>
+        {!listing.available && (
+          <div className="absolute inset-0 flex items-center justify-center bg-white/40 backdrop-blur-[2px]">
+            <span className="bg-gray-800 text-white font-bold px-3 py-1 rounded-full text-xs">
+              AGOTADO
+            </span>
           </div>
         )}
-
-        {/* Fade overlay at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/30 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="p-4 flex-1 flex flex-col gap-2">
+      <div className="p-3 flex flex-col flex-1">
+        {/* Price & Add Button */}
+        <div className="flex items-start justify-between mt-1 mb-1.5">
+          <div className="flex flex-col">
+            <span className="text-lg font-extrabold text-[#212121]">
+              {isPromo ? `$2.500` : `$${listing.price.toLocaleString('es-AR')}`}
+            </span>
+            {isPromo && (
+              <span className="text-[11px] line-through text-[#9E9E9E] font-medium -mt-0.5">
+                $3.330
+              </span>
+            )}
+            <span className="text-[11px] text-[#757575] font-medium uppercase tracking-wider mt-0.5">
+              {listing.quantity} {listing.unit}
+            </span>
+          </div>
+          
+          {listing.available && (
+            <button 
+              onClick={handleAdd}
+              disabled={adding}
+              className="w-10 h-10 rounded-full bg-[#F1F8E9] flex items-center justify-center text-[#2E7D32] hover:bg-[#2E7D32] hover:text-white transition-colors border border-[#81C784] shadow-sm disabled:opacity-50 z-20"
+              aria-label="Agregar o Solicitar"
+            >
+              <Plus size={20} className={adding ? "animate-spin" : ""} />
+            </button>
+          )}
+        </div>
+
         {/* Title */}
-        <h3 className="font-bold text-[#212121] text-sm leading-snug line-clamp-2 group-hover:text-[#2E7D32] transition-colors duration-200">
+        <h3 className="font-semibold text-sm text-[#212121] leading-tight line-clamp-2 mt-1">
           {listing.title}
         </h3>
-
-        {/* Business + location */}
-        <div className="flex items-center gap-1.5 text-[#616161]">
-          <Building2 size={12} className="shrink-0" />
-          <span className="text-xs truncate">{biz?.name ?? 'Empresa'}</span>
-          <span className="text-gray-300">·</span>
-          <MapPin size={12} className="shrink-0" />
-          <span className="text-xs truncate">{biz?.city ?? 'Argentina'}</span>
-        </div>
-
-        {/* Quantity */}
-        <div className="flex items-center gap-1.5 text-[#616161]">
-          <Package size={12} className="shrink-0" />
-          <span className="text-xs font-medium">
-            {listing.quantity.toLocaleString('es-AR')} {listing.unit}
-          </span>
-        </div>
-
-        {/* Price + CTA */}
-        <div className="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between">
-          <span
-            className={`text-sm font-bold ${listing.price === 0 ? 'text-[#388E3C]' : 'text-[#212121]'}`}
-          >
-            {priceLabel}
-          </span>
-          <span className="flex items-center gap-1 text-xs font-semibold text-[#2E7D32] group-hover:gap-2 transition-all duration-200">
-            Ver más <ArrowRight size={13} />
-          </span>
-        </div>
+        
+        {/* Distance / Extra mock info */}
+        <p className="text-[11px] text-[#9E9E9E] mt-auto pt-2">
+          Recogida o envío disponible
+        </p>
       </div>
     </Link>
   );

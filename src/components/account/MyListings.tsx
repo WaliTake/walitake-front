@@ -109,7 +109,7 @@ export function MyListings({ initialListings }: MyListingsProps) {
                   <Badge variant={listing.available ? 'available' : 'soldout'} size="sm">
                     {listing.available ? 'Disponible' : 'Agotado'}
                   </Badge>
-                  {listing.price === 0 && <Badge variant="free" size="sm">Gratis</Badge>}
+                  {listing.price === 0 && <Badge variant="promo" className="bg-[#FFEB3B] text-black font-bold border-0" size="sm">Promo -25%</Badge>}
                 </div>
 
                 <p className="text-xs text-[#616161] mt-1.5">

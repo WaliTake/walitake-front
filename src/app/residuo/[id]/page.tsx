@@ -39,7 +39,7 @@ export default async function ResiduoDetailPage({ params }: Props) {
 
   const priceLabel =
     listing.price === 0
-      ? 'Gratis'
+      ? 'Promo -25% ($2.500)'
       : `$${listing.price.toLocaleString('es-AR')} / ${listing.unit}`;
 
   const formattedDate = new Date(listing.createdAt).toLocaleDateString('es-AR', {
@@ -81,7 +81,11 @@ export default async function ResiduoDetailPage({ params }: Props) {
                     {category.name}
                   </Badge>
                 )}
-                {listing.price === 0 && <Badge variant="free">Gratis</Badge>}
+                {listing.price === 0 && (
+                  <Badge variant="promo" className="bg-[#FFEB3B] text-black font-bold border-0">
+                    PROMO -25%
+                  </Badge>
+                )}
                 <Badge variant={listing.available ? 'available' : 'soldout'}>
                   {listing.available ? 'Disponible' : 'Agotado'}
                 </Badge>
@@ -153,11 +157,14 @@ export default async function ResiduoDetailPage({ params }: Props) {
             {/* Price card */}
             <div className="bg-white rounded-2xl border border-[#E0E0E0] shadow-sm p-5">
               <div className="flex items-baseline gap-2 mb-1">
-                <span
-                  className={`text-3xl font-bold ${listing.price === 0 ? 'text-[#388E3C]' : 'text-[#212121]'}`}
-                >
-                  {listing.price === 0 ? 'Gratis' : `$${listing.price.toLocaleString('es-AR')}`}
+                <span className="text-3xl font-black text-[#212121]">
+                  {listing.price === 0 ? `$2.500` : `$${listing.price.toLocaleString('es-AR')}`}
                 </span>
+                {listing.price === 0 && (
+                  <span className="text-sm line-through text-[#9E9E9E] font-medium ml-2">
+                    $3.330
+                  </span>
+                )}
                 {listing.price > 0 && (
                   <span className="text-sm text-[#616161]">/ {listing.unit}</span>
                 )}
