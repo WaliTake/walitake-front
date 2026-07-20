@@ -25,7 +25,7 @@ export function CategoryPills({ categories, active, onChange }: CategoryPillsPro
 
   return (
     <div className="py-6 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
-      <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide snap-x">
+      <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide snap-x justify-start md:justify-center">
         {all.map((cat) => {
           const Icon = cat.id === '' ? LayoutGrid : (iconMap[cat.icon] ?? Recycle);
           const isActive = active === cat.id;
