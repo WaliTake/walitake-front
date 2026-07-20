@@ -11,7 +11,7 @@ from .database import engine, get_db
 # Create all tables
 models.Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="EcoResiduos API", description="API for the EcoResiduos Marketplace")
+app = FastAPI(title="walitake API", description="API for the walitake Marketplace")
 
 # CORS for frontend
 app.add_middleware(
@@ -26,7 +26,7 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the EcoResiduos API"}
+    return {"message": "Welcome to the walitake API"}
 
 # Categories
 @app.get("/categories", response_model=List[schemas.Category])
@@ -154,7 +154,7 @@ def login(credentials: dict, db: Session = Depends(get_db)):
     user = db.query(models.User).filter(models.User.email == email).first()
     if not user:
         # Fallback to the first user if email is just demo
-        if email == "usuario@ecoresiduos.com":
+        if email == "usuario@walitake.com":
             user = db.query(models.User).first()
             if not user:
                  raise HTTPException(status_code=401, detail="Invalid credentials")

@@ -1,6 +1,6 @@
-# EcoResiduos Backend API
+# walitake Backend API
 
-Backend construido con Python, FastAPI y SQLite para la plataforma EcoResiduos.
+Backend construido con Python, FastAPI y SQLite para la plataforma walitake.
 
 ## Requisitos
 

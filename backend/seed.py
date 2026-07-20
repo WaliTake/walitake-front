@@ -29,7 +29,7 @@ categories = [
 ]
 
 users = [
-  { "id": "usr-1", "name": "Martín Silva", "email": "usuario@ecoresiduos.com", "phone": "+54 11 4567-8901", "joined_at": "2024-01-15T10:00:00Z" },
+  { "id": "usr-1", "name": "Martín Silva", "email": "usuario@walitake.com", "phone": "+54 11 4567-8901", "joined_at": "2024-01-15T10:00:00Z" },
   { "id": "usr-2", "name": "Laura Gómez", "email": "laura@maderera.com", "phone": "+54 261 456-7890", "joined_at": "2024-02-20T14:30:00Z" },
   { "id": "usr-3", "name": "Carlos Ruiz", "email": "carlos@hotelcentro.com", "phone": "+54 351 123-4567", "joined_at": "2024-03-05T09:15:00Z" }
 ]
