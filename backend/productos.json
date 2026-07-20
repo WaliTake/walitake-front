@@ -12,8 +12,8 @@
         "unidad": "kg"
       },
       "tituloObjeto": "Cartón corrugado prensado",
-      "descripcion": "Cartón limpio proveniente de cajas de embalaje, seco y prensado. Ideal para recicladoras y fabricantes de pulpa. Recogida en Santa Cruz de la Sierra, Parque Industrial; envío local coordinable con costo adicional.",
-      "imagen": "https://loremflickr.com/1280/720/cardboard,recycling?lock=1001"
+      "descripcion": "Cartón limpio de cajas de embalaje, seco y prensado. Recogida en Santa Cruz, Parque Industrial.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt0CHn9Pp5jGPt5FSvwrKZNaEBvCfNFuCjI-nPfb-x7Q&s=10"
     },
     {
       "id": 2,
@@ -26,8 +26,8 @@
         "unidad": "kg"
       },
       "tituloObjeto": "Botellas PET transparentes",
-      "descripcion": "Botellas PET transparentes, vacías, compactadas y sin líquidos. Las tapas se entregan separadas. Entrega en punto acordado dentro de La Paz, Miraflores o recogida directa.",
-      "imagen": "https://loremflickr.com/1280/720/plastic,bottles,recycling?lock=1002"
+      "descripcion": "Botellas PET vacías, compactadas y sin líquidos. Tapas separadas y entrega coordinable en La Paz.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRckr-Zv19mFd2WIiO5NOw1hxKdbhpOn7kOBisTPMUHeQFR2olFKEdrJytM&s=10"
     },
     {
       "id": 3,
@@ -40,8 +40,8 @@
         "unidad": "kg"
       },
       "tituloObjeto": "Papel blanco de oficina",
-      "descripcion": "Papel bond usado por una cara, sin plastificar y almacenado en un ambiente seco. Apto para reciclaje. Entrega en punto acordado dentro de Oruro, Zona Norte o recogida directa.",
-      "imagen": "https://loremflickr.com/1280/720/paper,waste,recycling?lock=1003"
+      "descripcion": "Papel bond usado por una cara, sin plastificar y almacenado en seco. Disponible en Oruro.",
+      "imagen": "https://thumbs.dreamstime.com/b/pilas-de-papel-residual-en-la-calle-clasificar-basura-vida-cotidiana-peri%C3%B3dicos-viejos-esperando-ser-recogidos-por-un-cami%C3%B3n-237079733.jpg"
     },
     {
       "id": 4,
@@ -54,8 +54,8 @@
         "unidad": "kg"
       },
       "tituloObjeto": "Latas de aluminio compactadas",
-      "descripcion": "Latas de bebidas lavadas y compactadas. Lote homogéneo de aluminio para fundición o reciclaje. Entrega en punto acordado dentro de El Alto, Río Seco o recogida directa.",
-      "imagen": "https://loremflickr.com/1280/720/aluminum,cans,recycling?lock=1004"
+      "descripcion": "Latas de bebidas lavadas y compactadas. Lote homogéneo listo para reciclaje.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHNMC0cBcomXsd6PEl3kTHAVoBszbvoKCUG4cOR2t9URJP2tUA-50YSHg&s=10"
     },
     {
       "id": 5,
@@ -68,8 +68,8 @@
         "unidad": "kg"
       },
       "tituloObjeto": "Chatarra de hierro liviano",
-      "descripcion": "Retazos de perfiles, tubos y láminas de hierro sin residuos químicos. Material listo para clasificación. Recogida disponible en Santa Cruz de la Sierra, Parque Industrial.",
-      "imagen": "https://loremflickr.com/1280/720/iron,scrap,metal?lock=1005"
+      "descripcion": "Retazos de perfiles, tubos y láminas de hierro sin residuos químicos. Material clasificable.",
+      "imagen": "https://st.depositphotos.com/2466859/3061/i/450/depositphotos_30610677-stock-photo-scrap-metal-old-car-parts.jpg"
     },
     {
       "id": 6,
@@ -82,344 +82,904 @@
         "unidad": "kg"
       },
       "tituloObjeto": "Retazos de cable de cobre",
-      "descripcion": "Cableado eléctrico fuera de uso con contenido de cobre. Se vende como lote, sin componentes energizados. Recogida en Santa Cruz de la Sierra, Parque Industrial; envío local coordinable con costo adicional.",
-      "imagen": "https://loremflickr.com/1280/720/copper,wire,scrap?lock=1006"
+      "descripcion": "Cableado eléctrico fuera de uso con contenido de cobre. Se vende como lote sin energía.",
+      "imagen": "https://thumbs.dreamstime.com/b/cables-el%C3%A9ctricos-inutilizables-en-el-sitio-de-la-eliminaci%C3%B3n-residuos-116669912.jpg"
     },
     {
       "id": 7,
-      "usuarioEmail": "jose@walitake.com",
-      "promo": 25,
-      "costoReal": null,
-      "costoAnteriorSinDescuento": 360.0,
-      "cantidadProducto": {
-        "valor": 300,
-        "unidad": "unidades"
-      },
-      "tituloObjeto": "Botellas de vidrio retornables",
-      "descripcion": "Botellas de vidrio enteras, lavadas y clasificadas por tamaño. Útiles para reutilización o trituración. Entrega en punto acordado dentro de El Alto, Villa Adela o recogida directa.",
-      "imagen": "https://loremflickr.com/1280/720/glass,bottles,recycling?lock=1007"
-    },
-    {
-      "id": 8,
-      "usuarioEmail": "carlos@walitake.com",
-      "promo": 5,
-      "costoReal": null,
-      "costoAnteriorSinDescuento": 210.0,
-      "cantidadProducto": {
-        "valor": 60,
-        "unidad": "litros"
-      },
-      "tituloObjeto": "Aceite vegetal usado filtrado",
-      "descripcion": "Aceite de cocina usado, filtrado y almacenado en bidones cerrados. Destinado a reciclaje industrial. Recogida en Oruro, Zona Norte; envío local coordinable con costo adicional.",
-      "imagen": "https://loremflickr.com/1280/720/used,cooking,oil?lock=1008"
-    },
-    {
-      "id": 9,
-      "usuarioEmail": "ana@walitake.com",
+      "usuarioEmail": "usuario@walitake.com",
       "promo": 10,
       "costoReal": null,
       "costoAnteriorSinDescuento": 180.0,
       "cantidadProducto": {
-        "valor": 2,
-        "unidad": "m3"
-      },
-      "tituloObjeto": "Aserrín seco de carpintería",
-      "descripcion": "Aserrín de madera sin pintura, barniz ni tratamientos químicos. Útil para compostaje, camas o briquetas. Recogida disponible en La Paz, Miraflores.",
-      "imagen": "https://loremflickr.com/1280/720/sawdust,wood?lock=1009"
-    },
-    {
-      "id": 10,
-      "usuarioEmail": "jose@walitake.com",
-      "promo": 5,
-      "costoReal": null,
-      "costoAnteriorSinDescuento": 700.0,
-      "cantidadProducto": {
-        "valor": 25,
-        "unidad": "unidades"
-      },
-      "tituloObjeto": "Pallets de madera usados",
-      "descripcion": "Pallets recuperados con desgaste superficial y estructura reutilizable. Algunos requieren reparación menor. Recogida disponible en El Alto, Villa Adela.",
-      "imagen": "https://loremflickr.com/1280/720/wooden,pallets?lock=1010"
-    },
-    {
-      "id": 11,
-      "usuarioEmail": "juan@walitake.com",
-      "promo": 25,
-      "costoReal": null,
-      "costoAnteriorSinDescuento": 375.0,
-      "cantidadProducto": {
-        "valor": 1.5,
-        "unidad": "m3"
-      },
-      "tituloObjeto": "Retazos de madera natural",
-      "descripcion": "Recortes de pino y madera natural, sin melamina ni pintura. Diferentes largos y espesores. Recogida en Cochabamba, Quillacollo; envío local coordinable con costo adicional.",
-      "imagen": "https://loremflickr.com/1280/720/wood,offcuts?lock=1011"
-    },
-    {
-      "id": 12,
-      "usuarioEmail": "usuario@walitake.com",
-      "promo": 35,
-      "costoReal": null,
-      "costoAnteriorSinDescuento": 176.0,
-      "cantidadProducto": {
-        "valor": 55,
+        "valor": 150,
         "unidad": "kg"
       },
-      "tituloObjeto": "Envases plásticos PEAD",
-      "descripcion": "Bidones y envases de polietileno de alta densidad, lavados y sin residuos peligrosos. Entrega en punto acordado dentro de La Paz, Zona Industrial o recogida directa.",
-      "imagen": "https://loremflickr.com/1280/720/hdpe,plastic,containers?lock=1012"
+      "tituloObjeto": "Cajas de cartón desmontadas",
+      "descripcion": "Cajas limpias y secas, desmontadas para facilitar transporte y almacenamiento.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9RxkUMQmRGpIczxtyocHVZKnuHug_lnSpsOseJojmjw&s=10"
     },
     {
-      "id": 13,
-      "usuarioEmail": "carlos@walitake.com",
-      "promo": 30,
-      "costoReal": null,
-      "costoAnteriorSinDescuento": 200.0,
-      "cantidadProducto": {
-        "valor": 400,
-        "unidad": "unidades"
-      },
-      "tituloObjeto": "Sacos de polipropileno usados",
-      "descripcion": "Sacos tejidos de polipropileno limpios y secos, provenientes de productos agrícolas no peligrosos. Recogida disponible en Oruro, Zona Norte.",
-      "imagen": "https://loremflickr.com/1280/720/polypropylene,bags?lock=1013"
-    },
-    {
-      "id": 14,
-      "usuarioEmail": "jose@walitake.com",
+      "id": 8,
+      "usuarioEmail": "usuario@walitake.com",
       "promo": 15,
       "costoReal": null,
-      "costoAnteriorSinDescuento": 198.0,
+      "costoAnteriorSinDescuento": 315.0,
       "cantidadProducto": {
         "valor": 90,
         "unidad": "kg"
       },
-      "tituloObjeto": "Film plástico PEBD",
-      "descripcion": "Película plástica flexible transparente, separada de etiquetas, tierra y restos orgánicos. Recogida en El Alto, Villa Adela; envío local coordinable con costo adicional.",
-      "imagen": "https://loremflickr.com/1280/720/plastic,film,recycling?lock=1014"
+      "tituloObjeto": "Film stretch transparente",
+      "descripcion": "Plástico stretch de embalaje, limpio y compactado en bolsas industriales.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdVwEhYSjpta873V96LPT2H-d4GcF3X5uXv9UGjvwPVaT7JwOu4-2m0LyM&s=10"
     },
     {
-      "id": 15,
+      "id": 9,
+      "usuarioEmail": "usuario@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 420.0,
+      "cantidadProducto": {
+        "valor": 35,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Pallets de madera usados",
+      "descripcion": "Pallets recuperables con desgaste superficial, aptos para reparación o reutilización.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCBXyYLIfoKYoc6SfeALoBihBuqcpYtCrcTYckqhk5k65KbNDWRVMp4Bw&s=10"
+    },
+    {
+      "id": 10,
+      "usuarioEmail": "usuario@walitake.com",
+      "promo": 5,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 210.0,
+      "cantidadProducto": {
+        "valor": 140,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Frascos de vidrio transparente",
+      "descripcion": "Frascos sin tapa, lavados y separados por color para reciclaje o reutilización.",
+      "imagen": "https://preview.redd.it/what-should-i-do-with-all-these-glasses-jar-v0-4a6dtuikgc4f1.jpeg?width=1080&crop=smart&auto=webp&s=a735cbe72d8ba47c0c4ac023c7c9e177295f7559"
+    },
+    {
+      "id": 11,
       "usuarioEmail": "usuario@walitake.com",
       "promo": 25,
       "costoReal": null,
-      "costoAnteriorSinDescuento": 840.0,
+      "costoAnteriorSinDescuento": 540.0,
       "cantidadProducto": {
-        "valor": 12,
+        "valor": 18,
         "unidad": "unidades"
       },
       "tituloObjeto": "Tambores metálicos vacíos",
-      "descripcion": "Tambores de acero vacíos, lavados y sin contenido peligroso. Aptos para reacondicionamiento. Recogida disponible en La Paz, Zona Industrial.",
-      "imagen": "https://loremflickr.com/1280/720/steel,drums?lock=1015"
+      "descripcion": "Tambores de acero de uso alimentario, vacíos y sin residuos peligrosos.",
+      "imagen": "https://image.made-in-china.com/2f0j00RFGieHnKEyrp/High-Quality-55-Gallon-Empty-200L-or-210L-Steel-Oil-Drum-Barrel.webp"
     },
     {
-      "id": 16,
-      "usuarioEmail": "luis@walitake.com",
-      "promo": 15,
-      "costoReal": null,
-      "costoAnteriorSinDescuento": 700.0,
-      "cantidadProducto": {
-        "valor": 20,
-        "unidad": "unidades"
-      },
-      "tituloObjeto": "Neumáticos usados de automóvil",
-      "descripcion": "Neumáticos fuera de uso, sin aro metálico. Aptos para reciclaje de caucho o proyectos de reutilización. Recogida disponible en El Alto, Río Seco.",
-      "imagen": "https://loremflickr.com/1280/720/used,tires,recycling?lock=1016"
-    },
-    {
-      "id": 17,
+      "id": 12,
       "usuarioEmail": "usuario@walitake.com",
-      "promo": 30,
-      "costoReal": null,
-      "costoAnteriorSinDescuento": 320.0,
-      "cantidadProducto": {
-        "valor": 100,
-        "unidad": "kg"
-      },
-      "tituloObjeto": "Retazos textiles mixtos",
-      "descripcion": "Recortes de tela de confección en colores y tamaños variados. Material seco y separado de basura común. Recogida en La Paz, Zona Industrial; envío local coordinable con costo adicional.",
-      "imagen": "https://loremflickr.com/1280/720/textile,scraps?lock=1017"
-    },
-    {
-      "id": 18,
-      "usuarioEmail": "jose@walitake.com",
-      "promo": 5,
-      "costoReal": null,
-      "costoAnteriorSinDescuento": 240.0,
-      "cantidadProducto": {
-        "valor": 60,
-        "unidad": "kg"
-      },
-      "tituloObjeto": "Retazos de algodón",
-      "descripcion": "Desperdicio limpio de algodón proveniente de corte textil. Útil como relleno o materia prima reciclada. Entrega en punto acordado dentro de El Alto, Villa Adela o recogida directa.",
-      "imagen": "https://loremflickr.com/1280/720/cotton,fabric,scraps?lock=1018"
-    },
-    {
-      "id": 19,
-      "usuarioEmail": "maria@walitake.com",
       "promo": 10,
       "costoReal": null,
-      "costoAnteriorSinDescuento": 240.0,
+      "costoAnteriorSinDescuento": 160.0,
       "cantidadProducto": {
         "valor": 40,
         "unidad": "kg"
       },
-      "tituloObjeto": "Retazos de cuero natural",
-      "descripcion": "Recortes de cuero de marroquinería en tamaños pequeños y medianos, separados por color. Entrega en punto acordado dentro de Santa Cruz de la Sierra, Parque Industrial o recogida directa.",
-      "imagen": "https://loremflickr.com/1280/720/leather,scraps?lock=1019"
+      "tituloObjeto": "Poliestireno expandido limpio",
+      "descripcion": "Bloques de EPS provenientes de embalajes, secos y libres de restos orgánicos.",
+      "imagen": "https://static.wixstatic.com/media/1bdfa2_b77e05b205a14bd8ab26f53c0c6613e7~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1bdfa2_b77e05b205a14bd8ab26f53c0c6613e7~mv2.jpg"
+    },
+    {
+      "id": 13,
+      "usuarioEmail": "usuario@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 195.0,
+      "cantidadProducto": {
+        "valor": 130,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Tubos de cartón industrial",
+      "descripcion": "Núcleos de cartón rígido de rollos textiles y plásticos, clasificados por tamaño.",
+      "imagen": "https://cdn.shopify.com/s/files/1/0593/4235/6578/files/tips-for-cardboard-recycling_600x600.jpg?v=1734092578"
+    },
+    {
+      "id": 14,
+      "usuarioEmail": "usuario@walitake.com",
+      "promo": 30,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 525.0,
+      "cantidadProducto": {
+        "valor": 25,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Perfiles de aluminio sobrantes",
+      "descripcion": "Retazos de perfiles de aluminio limpios, sin tornillos ni piezas plásticas.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGtfIDWP7M6AUEow3O_7LPE4HChSCGz0BFtoJQQniKbzDqfh7ps_fvFV-H&s=10"
+    },
+    {
+      "id": 15,
+      "usuarioEmail": "usuario@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 280.0,
+      "cantidadProducto": {
+        "valor": 20,
+        "unidad": "m2"
+      },
+      "tituloObjeto": "Retazos de cerámica",
+      "descripcion": "Sobrantes de baldosas y porcelanato para mosaicos, relleno o proyectos decorativos.",
+      "imagen": "https://thumbs.dreamstime.com/b/modelo-de-residuos-azulejos-cer%C3%A1mica-recurso-que-recicla-el-174164634.jpg"
+    },
+    {
+      "id": 16,
+      "usuarioEmail": "usuario@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 260.0,
+      "cantidadProducto": {
+        "valor": 65,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Flejes plásticos de embalaje",
+      "descripcion": "Flejes de PET y PP separados, secos y enrollados para reciclaje industrial.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRyjW-T62pekNA9mxTMtIVw_rv-AEy7Xl34GqE0QujAUU2O6QnNZ4U6fA&s=10"
+    },
+    {
+      "id": 17,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 225.0,
+      "cantidadProducto": {
+        "valor": 150,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Aserrín de madera seca",
+      "descripcion": "Aserrín limpio de carpintería, sin pintura ni tratamientos químicos.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-FlQ3Gm_LBJZUcvvX2GP7Y1pcZTIv2kK4PTDNL07vBD91pfELVpKFVdCl&s=10"
+    },
+    {
+      "id": 18,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 360.0,
+      "cantidadProducto": {
+        "valor": 120,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Retazos de madera contrachapada",
+      "descripcion": "Piezas de triplay de distintos tamaños, útiles para prototipos y carpintería.",
+      "imagen": "https://cdn.prod.website-files.com/59864b799abf440001d23457/5c2dfa05765ccc1aa00cdaf0_riciclaggio-legno-carta-cartone.jpg"
+    },
+    {
+      "id": 19,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 480.0,
+      "cantidadProducto": {
+        "valor": 12,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Bidones HDPE de 60 litros",
+      "descripcion": "Bidones vacíos de uso alimentario, lavados y con tapa reutilizable.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzYZQAtXrshuc7RDSsn7TfjTh7OOjZJF1CM2lub9dexGisgnwZk5pLmjA&s=10"
     },
     {
       "id": 20,
-      "usuarioEmail": "usuario@walitake.com",
-      "promo": 35,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 25,
       "costoReal": null,
-      "costoAnteriorSinDescuento": 375.0,
+      "costoAnteriorSinDescuento": 300.0,
+      "cantidadProducto": {
+        "valor": 100,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Sacos de polipropileno",
+      "descripcion": "Sacos tejidos vacíos, limpios y agrupados en fardos para reutilización.",
+      "imagen": "https://s.alicdn.com/@sc04/kf/H007e38c08c414b329d35babf17b1499cI.jpg"
+    },
+    {
+      "id": 21,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 680.0,
+      "cantidadProducto": {
+        "valor": 80,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Viruta de acero",
+      "descripcion": "Viruta metálica seca proveniente de mecanizado, sin mezcla con otros residuos.",
+      "imagen": "https://oliumrecicla.com/wp-content/uploads/2023/04/En-que-contenedores-se-recicla-el-acite-usado.jpg"
+    },
+    {
+      "id": 22,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 30,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 450.0,
+      "cantidadProducto": {
+        "valor": 150,
+        "unidad": "litros"
+      },
+      "tituloObjeto": "Aceite vegetal usado",
+      "descripcion": "Aceite de cocina filtrado y almacenado en recipientes cerrados para gestor autorizado.",
+      "imagen": "https://oliumrecicla.com/wp-content/uploads/2023/04/En-que-contenedores-se-recicla-el-acite-usado.jpg"
+    },
+    {
+      "id": 23,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 120.0,
+      "cantidadProducto": {
+        "valor": 100,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Borra de café",
+      "descripcion": "Residuo orgánico de café, fresco y separado para compostaje o lombricultura.",
+      "imagen": "https://tecscience.tec.mx/es/wp-content/uploads/sites/8/2025/07/residuos-de-cafe-para-crear-plastico1.jpg"
+    },
+    {
+      "id": 24,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 240.0,
+      "cantidadProducto": {
+        "valor": 24,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Cajones de madera usados",
+      "descripcion": "Cajones resistentes de frutas y alimentos, aptos para reparación o decoración.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYki9hH73Q237Bq0IFN88S_EiW0TEGz1CQD5LYlHrq25V5dyAzBPLUTD8&s=10"
+    },
+    {
+      "id": 25,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 5,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 190.0,
+      "cantidadProducto": {
+        "valor": 50,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Cintas de nylon industrial",
+      "descripcion": "Retazos y rollos parciales de cinta de nylon para amarre o reutilización.",
+      "imagen": "https://image.made-in-china.com/202f0j00psWoZrdqrDkL/Ep-Cc-Nylon-Steel-Cord-Second-Hand-Used-Conveyor-Belt.webp"
+    },
+    {
+      "id": 26,
+      "usuarioEmail": "jose@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 360.0,
+      "cantidadProducto": {
+        "valor": 300,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Vidrio molido clasificado",
+      "descripcion": "Calcín de vidrio verde y transparente, separado y sin cerámica.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd5S6dF0r_tu4pRLQh0WqP5NMTa0gGzWcK9gRlViwz3Xfi7l04WUY2m1A&s=10"
+    },
+    {
+      "id": 27,
+      "usuarioEmail": "juan@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 300.0,
+      "cantidadProducto": {
+        "valor": 100,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Retazos de tela de algodón",
+      "descripcion": "Recortes textiles limpios, separados por color y sin cierres metálicos.",
+      "imagen": "https://www.clarin.com/2019/12/26/mUuETM2n_1200x0__1.jpg"
+    },
+    {
+      "id": 28,
+      "usuarioEmail": "juan@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 260.0,
+      "cantidadProducto": {
+        "valor": 80,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Recortes de tela denim",
+      "descripcion": "Retazos de mezclilla de confección, aptos para relleno o productos reciclados.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOF2vTMsvzgIIHKJ4nU9OQ51FHCOuJ1m8Be7yQovQFo776hUig6_exqpk&s=10"
+    },
+    {
+      "id": 29,
+      "usuarioEmail": "juan@walitake.com",
+      "promo": 25,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 720.0,
+      "cantidadProducto": {
+        "valor": 60,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Retazos de banda transportadora",
+      "descripcion": "Caucho industrial grueso en secciones, útil para pisos o protección.",
+      "imagen": "https://s.alicdn.com/@sc04/kf/Aaaa9a8d9ea734e82bedf64be0ed077baW/Recycled-Rubber-Butyl-Inner-Tube-Scrap-Conveyor-Belt-Black-High-Flow-Automotive-Parts-US.jpg"
+    },
+    {
+      "id": 30,
+      "usuarioEmail": "juan@walitake.com",
+      "promo": 30,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 1100.0,
+      "cantidadProducto": {
+        "valor": 20,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Cable de cobre con aislante",
+      "descripcion": "Cable de baja tensión fuera de servicio, enrollado y sin componentes energizados.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScjvV3t25d0qUOm0g5ZpQPmcwNyR3hkvxl23l8bGmcMjUwjueVN3akTWyc&s=10"
+    },
+    {
+      "id": 31,
+      "usuarioEmail": "juan@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 950.0,
       "cantidadProducto": {
         "valor": 15,
         "unidad": "kg"
       },
       "tituloObjeto": "Placas electrónicas en desuso",
-      "descripcion": "Placas de equipos electrónicos para gestor autorizado de residuos electrónicos. Sin baterías incluidas. Recogida en La Paz, Zona Industrial; envío local coordinable con costo adicional.",
-      "imagen": "https://loremflickr.com/1280/720/circuit,boards,electronic,waste?lock=1020"
+      "descripcion": "Tarjetas de equipos informáticos para recuperación por gestor autorizado.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDeUu2tFJ35FPoRh-tEMNwcVmKLXdg9OWX8gj4g1ulfIxDJO-e_ViDwbY&s=10"
     },
     {
-      "id": 21,
-      "usuarioEmail": "juan@walitake.com",
-      "promo": 30,
-      "costoReal": null,
-      "costoAnteriorSinDescuento": 900.0,
-      "cantidadProducto": {
-        "valor": 50,
-        "unidad": "unidades"
-      },
-      "tituloObjeto": "Componentes de computación usados",
-      "descripcion": "Lote de gabinetes, fuentes, ventiladores, memorias antiguas y cables. Se vende para repuestos o reciclaje. Recogida disponible en Cochabamba, Quillacollo.",
-      "imagen": "https://loremflickr.com/1280/720/computer,parts,electronic,waste?lock=1021"
-    },
-    {
-      "id": 22,
-      "usuarioEmail": "carlos@walitake.com",
-      "promo": 35,
-      "costoReal": null,
-      "costoAnteriorSinDescuento": 300.0,
-      "cantidadProducto": {
-        "valor": 500,
-        "unidad": "kg"
-      },
-      "tituloObjeto": "Bagazo de cebada cervecera",
-      "descripcion": "Bagazo húmedo fresco generado en producción cervecera. Recomendado para retiro el mismo día. Recogida disponible en Oruro, Zona Norte.",
-      "imagen": "https://loremflickr.com/1280/720/brewing,grain,waste?lock=1022"
-    },
-    {
-      "id": 23,
+      "id": 32,
       "usuarioEmail": "juan@walitake.com",
       "promo": 20,
       "costoReal": null,
-      "costoAnteriorSinDescuento": 120.0,
+      "costoAnteriorSinDescuento": 640.0,
       "cantidadProducto": {
-        "valor": 120,
+        "valor": 8,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Motores eléctricos pequeños",
+      "descripcion": "Motores fuera de servicio con bobinado de cobre, vendidos para recuperación.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2UwTqvPUdRb61E-Vi8JGn5ihDeJ4vhnsB9ta-bWuzWLJcnvThIhFY3jUY&s=10"
+    },
+    {
+      "id": 33,
+      "usuarioEmail": "juan@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 840.0,
+      "cantidadProducto": {
+        "valor": 40,
         "unidad": "kg"
       },
-      "tituloObjeto": "Borra de café para compostaje",
-      "descripcion": "Café molido usado, recolectado diariamente y sin mezcla con plásticos. Ideal para compostaje. Entrega en punto acordado dentro de Cochabamba, Quillacollo o recogida directa.",
-      "imagen": "https://loremflickr.com/1280/720/coffee,grounds,compost?lock=1023"
+      "tituloObjeto": "Recortes de acero inoxidable",
+      "descripcion": "Láminas y perfiles inoxidables limpios, sin piezas plásticas adheridas.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTP8eh48KH0p0sj_vGQCMd44CpCXj5I6jGeW2VnwiLQMpjrLkfC94_VhRs&s=10"
     },
     {
-      "id": 24,
-      "usuarioEmail": "ana@walitake.com",
+      "id": 34,
+      "usuarioEmail": "juan@walitake.com",
       "promo": 5,
       "costoReal": null,
-      "costoAnteriorSinDescuento": 180.0,
+      "costoAnteriorSinDescuento": 210.0,
       "cantidadProducto": {
-        "valor": 400,
+        "valor": 70,
         "unidad": "kg"
       },
-      "tituloObjeto": "Residuos de frutas y verduras",
-      "descripcion": "Restos vegetales separados en origen, sin carne, aceites ni envases. Aptos para compostaje o biodigestión. Recogida en La Paz, Miraflores; envío local coordinable con costo adicional.",
-      "imagen": "https://loremflickr.com/1280/720/fruit,vegetable,waste?lock=1024"
+      "tituloObjeto": "Retazos de tubería PVC",
+      "descripcion": "Segmentos de tubería limpios y secos, separados de accesorios metálicos.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqJpHxOUfIZWToLsDfpXjmvonXdGayuHcPmkojKoTuTA&s"
     },
     {
-      "id": 25,
-      "usuarioEmail": "luis@walitake.com",
-      "promo": 5,
+      "id": 35,
+      "usuarioEmail": "juan@walitake.com",
+      "promo": 25,
       "costoReal": null,
-      "costoAnteriorSinDescuento": 180.0,
+      "costoAnteriorSinDescuento": 360.0,
       "cantidadProducto": {
-        "valor": 1.8,
-        "unidad": "m3"
+        "valor": 30,
+        "unidad": "kg"
       },
-      "tituloObjeto": "Estiércol compostable",
-      "descripcion": "Estiércol de ganado mezclado con material vegetal seco. Producto sin tratamiento químico. Entrega en punto acordado dentro de El Alto, Río Seco o recogida directa.",
-      "imagen": "https://loremflickr.com/1280/720/manure,compost?lock=1025"
+      "tituloObjeto": "Retazos de acrílico",
+      "descripcion": "Planchas de acrílico transparente y de color, útiles para corte láser.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGaayRScVN41vNxAYKKAOgmUR9fkbnYs6S7soyu1aNBSH6_5qSpUpXo_GC&s=10"
     },
     {
-      "id": 26,
-      "usuarioEmail": "ana@walitake.com",
-      "promo": 35,
+      "id": 36,
+      "usuarioEmail": "juan@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 150.0,
+      "cantidadProducto": {
+        "valor": 50,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Espuma de embalaje",
+      "descripcion": "Planchas y recortes de espuma limpia para relleno o protección de productos.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk_8JUf_BPbdprD3hZa_xkY8kaPvAko_pvQ9Eoh8vH3quX7NT-QP-bzzE&s=10"
+    },
+    {
+      "id": 37,
+      "usuarioEmail": "maria@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 780.0,
+      "cantidadProducto": {
+        "valor": 30,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Viruta de latón",
+      "descripcion": "Viruta seca de mecanizado de latón, almacenada sin mezcla con acero.",
+      "imagen": "https://static.vecteezy.com/system/resources/previews/007/114/109/non_2x/steel-scrap-materials-recycling-aluminum-chip-waste-after-machining-metal-parts-on-a-cnc-lathe-closeup-twisted-spiral-steel-shavings-small-roughness-sharpness-free-photo.jpg"
+    },
+    {
+      "id": 38,
+      "usuarioEmail": "maria@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 525.0,
+      "cantidadProducto": {
+        "valor": 25,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Retazos de lámina inoxidable",
+      "descripcion": "Recortes planos de acero inoxidable para fabricación o recuperación.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6p7l-VC1CIrJ8aoqeD-lkz-ivUboKFEm5LcaH-3kCHgdKZ593CPj2oLK0&s=10"
+    },
+    {
+      "id": 39,
+      "usuarioEmail": "maria@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 165.0,
+      "cantidadProducto": {
+        "valor": 110,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Núcleos de cartón grueso",
+      "descripcion": "Tubos de cartón de rollos industriales, secos y ordenados por diámetro.",
+      "imagen": "https://iqrorwxhnmkilp5p.ldycdn.com/cloud/ljBpnKkolrSRolllkmplkp/bulk-sublimation-paper-jumbo-rolls-warehouse.jpg"
+    },
+    {
+      "id": 40,
+      "usuarioEmail": "maria@walitake.com",
+      "promo": 25,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 350.0,
+      "cantidadProducto": {
+        "valor": 25,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Cajas de madera reforzada",
+      "descripcion": "Cajas industriales reutilizables con desgaste menor y estructura firme.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8UAQ3D0plibRufR0O5mol7ZLPhrTpXsrlylJVFFdnjdhjyMhXWHTRM6eL&s=10"
+    },
+    {
+      "id": 41,
+      "usuarioEmail": "maria@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 104.0,
+      "cantidadProducto": {
+        "valor": 80,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Documentos triturados",
+      "descripcion": "Papel blanco triturado, seco y embolsado para reciclaje.",
+      "imagen": "https://m.media-amazon.com/images/I/71dgqUb64CL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": 42,
+      "usuarioEmail": "maria@walitake.com",
+      "promo": 30,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 320.0,
+      "cantidadProducto": {
+        "valor": 40,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Preformas PET transparentes",
+      "descripcion": "Preformas plásticas fuera de especificación, limpias y sin uso.",
+      "imagen": "https://s.alicdn.com/@sc04/kf/A9270642568824648ab5e51540d1e94adc/Quality-Injection-Molding-Grade-100-Clean-Transparent-Grade-Bottle-Preform-PET-Scrap-Plastic-Recycled-Raw-Material-OEM-Brand.jpg_300x300.jpg"
+    },
+    {
+      "id": 43,
+      "usuarioEmail": "maria@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 210.0,
+      "cantidadProducto": {
+        "valor": 70,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Tapas plásticas HDPE",
+      "descripcion": "Tapas de envases separadas por color, lavadas y secas.",
+      "imagen": "https://www.plastico.com/uploads/news-pictures/pphoto-2634.jpg"
+    },
+    {
+      "id": 44,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 15,
       "costoReal": null,
       "costoAnteriorSinDescuento": 120.0,
       "cantidadProducto": {
         "valor": 80,
         "unidad": "kg"
       },
-      "tituloObjeto": "Cáscaras de huevo trituradas",
-      "descripcion": "Cáscaras de huevo limpias, secas y trituradas. Útiles para compostaje y enmiendas de suelo. Recogida en La Paz, Miraflores; envío local coordinable con costo adicional.",
-      "imagen": "https://loremflickr.com/1280/720/eggshells,compost?lock=1026"
+      "tituloObjeto": "Libros y cuadernos usados",
+      "descripcion": "Material impreso sin tapas plásticas, clasificado para reciclaje de papel.",
+      "imagen": "https://abdc.es/wp-content/uploads/2020/05/recogida-papel-oficina.jpg"
     },
     {
-      "id": 27,
-      "usuarioEmail": "jose@walitake.com",
+      "id": 45,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 112.0,
+      "cantidadProducto": {
+        "valor": 80,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Periódicos y revistas",
+      "descripcion": "Papel periódico seco, atado en paquetes y sin humedad.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfD5pwwJUNpP-mJEL1fbAYSN-a7pshIcIMCZzvWYPYD3UfbWsjQrdcMfo&s=10"
+    },
+    {
+      "id": 46,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 135.0,
+      "cantidadProducto": {
+        "valor": 90,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Papel de color clasificado",
+      "descripcion": "Hojas y recortes de papel de color, secos y sin plastificado.",
+      "imagen": "https://cdn.shopify.com/s/files/1/0593/4235/6578/files/paper-recycling-25001_800x800.jpg?v=1754828596"
+    },
+    {
+      "id": 47,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 25,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 360.0,
+      "cantidadProducto": {
+        "valor": 24,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Cartuchos de tóner vacíos",
+      "descripcion": "Cartuchos usados de impresora, almacenados para recarga o gestor autorizado.",
+      "imagen": "https://www.retornoconsumibles.com/wp-content/uploads/2021/04/cartuchos-vacios.png"
+    },
+    {
+      "id": 48,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 240.0,
+      "cantidadProducto": {
+        "valor": 30,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Teclados y ratones en desuso",
+      "descripcion": "Periféricos informáticos sin funcionar para reparación o reciclaje electrónico.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDTF5rszjvSb5JBLfikaC_LDrCBSYvFe1y5oL6WtMomdK1LaN5OrHSoXHl&s=10"
+    },
+    {
+      "id": 49,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 30,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 900.0,
+      "cantidadProducto": {
+        "valor": 10,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Monitores LCD averiados",
+      "descripcion": "Monitores sin funcionamiento para repuestos o tratamiento por gestor autorizado.",
+      "imagen": "https://fotografias-compromiso.atresmedia.com/clipping/cmsimages02/2017/01/30/985FCEA3-6216-4A63-A3A3-11757BBB9803/58.jpg"
+    },
+    {
+      "id": 50,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 270.0,
+      "cantidadProducto": {
+        "valor": 18,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Papel aluminio industrial",
+      "descripcion": "Recortes limpios de lámina de aluminio sin restos de alimentos.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQQrLpr245si-2NTwGG7VNmvYG2kqqEFd5JB5IjMfCaHz-3cwkbSTSapmB&s=10"
+    },
+    {
+      "id": 51,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 400.0,
+      "cantidadProducto": {
+        "valor": 40,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Cajas plásticas apilables",
+      "descripcion": "Cajas rígidas de almacén con desgaste leve, aptas para reutilización.",
+      "imagen": "https://img.magnific.com/foto-gratis/inventario-almacen_23-2151938383.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "id": 52,
+      "usuarioEmail": "carlos@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 216.0,
+      "cantidadProducto": {
+        "valor": 180,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Cartón mixto de embalaje",
+      "descripcion": "Cartón corrugado y cartulina seca, compactados en fardos.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9PIP0L_wlRHU2ewzf6LyffF6nUOV9qR0hEu6jc9kLVDlYtiwUmbb0jPs&s=10"
+    },
+    {
+      "id": 53,
+      "usuarioEmail": "ana@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 350.0,
+      "cantidadProducto": {
+        "valor": 100,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Film LDPE transparente",
+      "descripcion": "Film flexible de embalaje limpio, seco y prensado para reciclaje.",
+      "imagen": "https://s.alicdn.com/@sc04/kf/A7aa8a766ada047d3b1ca024c2f4f9587L/Post-Industrial-LDPE-Film-Scrap-Molding-Grade-Recycled-Plastic-LDPE-Film-for-Export-China-Uzbekistan-Hungary-Turkey-Turkmenistan.jpeg"
+    },
+    {
+      "id": 54,
+      "usuarioEmail": "ana@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 420.0,
+      "cantidadProducto": {
+        "valor": 14,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Bidones HDPE de 20 litros",
+      "descripcion": "Envases lavados de uso no peligroso, con tapa y asa.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTEZRv7exJmr422-5FQz-wWOomDRgAlpm32MOaFS2Wzil9D1b2wFHhn70&s=10"
+    },
+    {
+      "id": 55,
+      "usuarioEmail": "ana@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 300.0,
+      "cantidadProducto": {
+        "valor": 30,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Baldes de polipropileno",
+      "descripcion": "Baldes vacíos y limpios de uso alimentario, algunos con tapa.",
+      "imagen": "https://thumbs.dreamstime.com/b/cubos-palanganas-y-utensilios-dom%C3%A9sticos-de-pl%C3%A1stico-colores-en-una-fila-un-estante-ferreter%C3%ADa-art%C3%ADculos-para-el-hogar-433710686.jpg"
+    },
+    {
+      "id": 56,
+      "usuarioEmail": "ana@walitake.com",
       "promo": 25,
       "costoReal": null,
       "costoAnteriorSinDescuento": 240.0,
       "cantidadProducto": {
-        "valor": 3,
-        "unidad": "m3"
+        "valor": 80,
+        "unidad": "kg"
       },
-      "tituloObjeto": "Ladrillos recuperados",
-      "descripcion": "Ladrillos enteros y fragmentos provenientes de una remodelación, separados de yeso y basura. Recogida disponible en El Alto, Villa Adela.",
-      "imagen": "https://loremflickr.com/1280/720/bricks,reclaimed?lock=1027"
+      "tituloObjeto": "Tubería PVC fuera de medida",
+      "descripcion": "Tramos de tubería nuevos y usados, secos y separados por diámetro.",
+      "imagen": "https://thumbs.dreamstime.com/b/tubo-apilado-del-pvc-58006350.jpg"
     },
     {
-      "id": 28,
-      "usuarioEmail": "luis@walitake.com",
+      "id": 57,
+      "usuarioEmail": "ana@walitake.com",
       "promo": 30,
       "costoReal": null,
-      "costoAnteriorSinDescuento": 300.0,
+      "costoAnteriorSinDescuento": 270.0,
       "cantidadProducto": {
-        "valor": 5,
-        "unidad": "m3"
+        "valor": 90,
+        "unidad": "kg"
       },
-      "tituloObjeto": "Escombros de concreto limpio",
-      "descripcion": "Concreto y piedra sin madera, plástico ni residuos peligrosos. Apto para relleno y trituración. Recogida en El Alto, Río Seco; envío local coordinable con costo adicional.",
-      "imagen": "https://loremflickr.com/1280/720/concrete,rubble?lock=1028"
+      "tituloObjeto": "Tapas plásticas mixtas",
+      "descripcion": "Tapas de PP y HDPE lavadas, secas y separadas de metales.",
+      "imagen": "https://st4.depositphotos.com/18470188/31379/i/950/depositphotos_313793116-stock-photo-colorful-plastic-bottle-caps-plastic.jpg"
     },
     {
-      "id": 29,
-      "usuarioEmail": "juan@walitake.com",
-      "promo": 15,
+      "id": 58,
+      "usuarioEmail": "ana@walitake.com",
+      "promo": 10,
       "costoReal": null,
-      "costoAnteriorSinDescuento": 160.0,
-      "cantidadProducto": {
-        "valor": 1,
-        "unidad": "m3"
-      },
-      "tituloObjeto": "Retazos de cerámica",
-      "descripcion": "Sobrantes y piezas con defectos de baldosas cerámicas. Útiles para mosaicos, relleno o trituración. Recogida en Cochabamba, Quillacollo; envío local coordinable con costo adicional.",
-      "imagen": "https://loremflickr.com/1280/720/ceramic,tiles,scraps?lock=1029"
-    },
-    {
-      "id": 30,
-      "usuarioEmail": "usuario@walitake.com",
-      "promo": 15,
-      "costoReal": null,
-      "costoAnteriorSinDescuento": 225.0,
+      "costoAnteriorSinDescuento": 180.0,
       "cantidadProducto": {
         "valor": 45,
         "unidad": "kg"
       },
-      "tituloObjeto": "Retazos de lámina acrílica",
-      "descripcion": "Recortes de acrílico transparente y de color, sin adhesivos ni mezcla con otros plásticos. Recogida en La Paz, Zona Industrial; envío local coordinable con costo adicional.",
-      "imagen": "https://loremflickr.com/1280/720/acrylic,plastic,sheets?lock=1030"
+      "tituloObjeto": "Espuma plástica protectora",
+      "descripcion": "Espuma flexible y limpia de embalajes de electrodomésticos.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_nL711HYFiR6N7INU_eKm6NaeRjRDqVlnJ707Sf_o4NdjVQ_pRGBna-E&s=10"
+    },
+    {
+      "id": 59,
+      "usuarioEmail": "ana@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 360.0,
+      "cantidadProducto": {
+        "valor": 36,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Gavetas plásticas industriales",
+      "descripcion": "Gavetas apilables con señales de uso, aptas para almacén o transporte.",
+      "imagen": "https://lirp.cdn-website.com/7ad3c13c/dms3rep/multi/opt/gavetas+plasticas-1a72dc6c-640w.jpg"
+    },
+    {
+      "id": 60,
+      "usuarioEmail": "ana@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 315.0,
+      "cantidadProducto": {
+        "valor": 70,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Flejes PET verdes",
+      "descripcion": "Flejes de embalaje enrollados, secos y sin grapas metálicas.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwQLFs3BLx3x7YAt57jPSzs-JPWRbxHta9OIeSDJH32DOMLiKd2Zjbez8&s=10"
+    },
+    {
+      "id": 61,
+      "usuarioEmail": "ana@walitake.com",
+      "promo": 5,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 390.0,
+      "cantidadProducto": {
+        "valor": 130,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Plástico rígido mixto",
+      "descripcion": "Piezas de PP y HDPE limpias, separadas de cables y componentes metálicos.",
+      "imagen": "https://thumbs.dreamstime.com/b/cables-el%C3%A9ctricos-viejos-95925065.jpg"
+    },
+    {
+      "id": 62,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 900.0,
+      "cantidadProducto": {
+        "valor": 300,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Perfiles de acero estructural",
+      "descripcion": "Tramos de vigas y ángulos de acero, sin concreto adherido.",
+      "imagen": "https://us.123rf.com/450wm/iuriigagarin/iuriigagarin2011/iuriigagarin201100335/159145591-fondo-universal-con-base-de-metal-tienda-almac%C3%A9n-de-productos-tubos-de-acero.jpg?ver=6"
+    },
+    {
+      "id": 63,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 1260.0,
+      "cantidadProducto": {
+        "valor": 18,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Tubería de cobre usada",
+      "descripcion": "Segmentos de tubería de cobre retirados de instalaciones, sin accesorios.",
+      "imagen": "https://thumbs.dreamstime.com/b/tubos-de-cobre-74860743.jpg"
+    },
+    {
+      "id": 64,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 780.0,
+      "cantidadProducto": {
+        "valor": 30,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Válvulas de latón usadas",
+      "descripcion": "Válvulas y conexiones de latón para recuperación de metal.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNOiPcNTVrNDAuUyMe6TsWlhegie_c-HVc0tReoFmR4u3Nk7zLjm_onnM&s=10"
+    },
+    {
+      "id": 65,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 25,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 960.0,
+      "cantidadProducto": {
+        "valor": 12,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Radiadores automotrices usados",
+      "descripcion": "Radiadores fuera de servicio para reparación o recuperación de metales.",
+      "imagen": "https://thumbs.dreamstime.com/b/radiadores-de-coches-usados-antiguos-apilados-en-el-dep%C3%B3sito-chatarra-piezas-del-veh%C3%ADculo-reciclado-residuos-autom%C3%B3viles-388880671.jpg"
+    },
+    {
+      "id": 66,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 15,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 600.0,
+      "cantidadProducto": {
+        "valor": 200,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Malla metálica de descarte",
+      "descripcion": "Rollos y recortes de malla de hierro con oxidación superficial.",
+      "imagen": "https://cdn.shopify.com/s/files/1/0225/0031/1115/files/mallas-metalicas-reciclar_600x600.jpg?v=1685628998"
+    },
+    {
+      "id": 67,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 30,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 750.0,
+      "cantidadProducto": {
+        "valor": 10,
+        "unidad": "unidades"
+      },
+      "tituloObjeto": "Lavaplatos de acero inoxidable",
+      "descripcion": "Lavaplatos retirados por remodelación, aptos para reparación o reciclaje.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSRkr4euRtf_OEYQ_TyiNPpiqUAx4eq6gpBTsRhNfEJv6C15U7StOcYSg&s=10"
+    },
+    {
+      "id": 68,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 10,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 260.0,
+      "cantidadProducto": {
+        "valor": 130,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Latas de hojalata",
+      "descripcion": "Envases metálicos lavados, compactados y sin restos de alimentos.",
+      "imagen": "https://www.canecas.com.co/images/Noticias_2021//reciclar-envases-enlatados1.jpg"
+    },
+    {
+      "id": 69,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 20,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 560.0,
+      "cantidadProducto": {
+        "valor": 80,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Láminas de zinc usadas",
+      "descripcion": "Retazos de calamina y zinc con desgaste, clasificados por tamaño.",
+      "imagen": "https://ventadezincporras.wordpress.com/wp-content/uploads/2023/02/50507977_1061652987347615_6667902908467511296_n.jpg"
+    },
+    {
+      "id": 70,
+      "usuarioEmail": "luis@walitake.com",
+      "promo": 35,
+      "costoReal": null,
+      "costoAnteriorSinDescuento": 1350.0,
+      "cantidadProducto": {
+        "valor": 300,
+        "unidad": "kg"
+      },
+      "tituloObjeto": "Piezas de maquinaria ferrosa",
+      "descripcion": "Engranajes, soportes y carcasas de hierro para recuperación o fundición.",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFkhy2xcWxH-h1SK1-VyHo-zJmoqArphdQioddZWmgqNINat4VKVavtQga&s=10"
     }
   ]
 }
