@@ -15,15 +15,15 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    'bg-[#2E7D32] text-white hover:bg-[#4CAF50] active:bg-[#1B5E20] shadow-sm hover:shadow-md',
+    'bg-[#22C55E] text-white hover:bg-[#166534] active:bg-[#14532d] shadow-sm hover:shadow-md',
   secondary:
-    'bg-[#F1F8E9] text-[#2E7D32] hover:bg-[#81C784]/30 active:bg-[#81C784]/50 border border-[#81C784]',
+    'bg-white text-[#166534] hover:bg-[#ECFDF3] active:bg-[#dcfce7] border border-[#22C55E]/30',
   outline:
-    'bg-transparent text-[#2E7D32] border border-[#2E7D32] hover:bg-[#F1F8E9] active:bg-[#81C784]/20',
+    'bg-transparent text-[#166534] border border-[#22C55E] hover:bg-[#ECFDF3] active:bg-[#dcfce7]',
   ghost:
-    'bg-transparent text-[#616161] hover:bg-gray-100 hover:text-[#212121] active:bg-gray-200',
+    'bg-transparent text-[#647067] hover:bg-[#ECFDF3] hover:text-[#166534] active:bg-[#dcfce7]',
   danger:
-    'bg-[#D32F2F] text-white hover:bg-red-600 active:bg-red-800 shadow-sm',
+    'bg-[#EF4444] text-white hover:bg-red-600 active:bg-red-800 shadow-sm',
 };
 
 const sizeClasses: Record<Size, string> = {

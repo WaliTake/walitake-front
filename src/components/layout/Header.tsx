@@ -64,11 +64,11 @@ export function Header() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href={ROUTES.home} className="flex items-center gap-2 group">
-              <div className="w-9 h-9 bg-[#2E7D32] rounded-xl flex items-center justify-center shadow-sm group-hover:bg-[#4CAF50] transition-colors duration-200">
+              <div className="w-9 h-9 bg-[#166534] rounded-xl flex items-center justify-center shadow-sm group-hover:bg-[#22C55E] transition-colors duration-200">
                 <Leaf className="text-white" size={20} />
               </div>
-              <span className="font-bold text-xl text-[#212121] hidden sm:block">
-                Eco<span className="text-[#2E7D32]">Residuos</span>
+              <span className="font-bold text-xl text-[#17221B] hidden sm:block">
+                Eco<span className="text-[#166534]">Residuos</span>
               </span>
             </Link>
 
@@ -81,8 +81,8 @@ export function Header() {
                   className={[
                     'px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200',
                     pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
-                      ? 'bg-[#F1F8E9] text-[#2E7D32]'
-                      : 'text-[#616161] hover:text-[#212121] hover:bg-gray-100',
+                      ? 'bg-[#ECFDF3] text-[#166534]'
+                      : 'text-[#647067] hover:text-[#17221B] hover:bg-gray-100',
                   ].join(' ')}
                 >
                   {link.label}
@@ -93,18 +93,18 @@ export function Header() {
             {/* Desktop Actions */}
             <div className="hidden md:flex items-center gap-3">
               <Link href={ROUTES.explorar} aria-label="Buscar residuos">
-                <button className="w-9 h-9 flex items-center justify-center rounded-full text-[#616161] hover:bg-gray-100 hover:text-[#212121] transition-colors">
+                <button className="w-9 h-9 flex items-center justify-center rounded-full text-[#647067] hover:bg-gray-100 hover:text-[#17221B] transition-colors">
                   <Search size={18} />
                 </button>
               </Link>
               
               <button 
                 onClick={() => setIsCartOpen(true)}
-                className="relative w-9 h-9 flex items-center justify-center rounded-full text-[#616161] hover:bg-gray-100 hover:text-[#2E7D32] transition-colors cursor-pointer"
+                className="relative w-9 h-9 flex items-center justify-center rounded-full text-[#647067] hover:bg-gray-100 hover:text-[#166534] transition-colors cursor-pointer"
               >
                 <ShoppingCart size={18} />
                 {items.length > 0 && (
-                  <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#E53935] text-white text-[10px] font-bold flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#EF4444] text-white text-[10px] font-bold flex items-center justify-center">
                     {items.length}
                   </span>
                 )}
@@ -117,28 +117,28 @@ export function Header() {
                     <Award size={16} className={
                       (user.xp || 0) < 100 ? 'text-[#8D6E63]' : // Bronce
                       (user.xp || 0) < 500 ? 'text-[#9E9E9E]' : // Plata
-                      'text-[#FFCA28]' // Oro
+                      'text-[#F59E0B]' // Oro
                     } />
-                    <span className="text-xs font-bold text-[#616161]">
+                    <span className="text-xs font-bold text-[#647067]">
                       {(user.xp || 0) < 100 ? 'Bronce' : (user.xp || 0) < 500 ? 'Plata' : 'Oro'}
                     </span>
                   </div>
 
                   <button
                     onClick={() => setDrawerOpen(true)}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#E0E0E0] hover:border-[#81C784] hover:bg-[#F1F8E9] transition-all duration-200 cursor-pointer"
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 hover:border-[#22C55E]/30 hover:bg-[#ECFDF3] transition-all duration-200 cursor-pointer"
                   >
-                    <div className="w-7 h-7 rounded-full bg-[#2E7D32] flex items-center justify-center text-white text-xs font-bold">
+                    <div className="w-7 h-7 rounded-full bg-[#166534] flex items-center justify-center text-white text-xs font-bold">
                       {user.name.charAt(0).toUpperCase()}
                     </div>
-                    <span className="text-sm font-semibold text-[#212121] max-w-[100px] truncate">
+                    <span className="text-sm font-semibold text-[#17221B] max-w-[100px] truncate">
                       {user.name.split(' ')[0]}
                     </span>
                   </button>
                   <button
                     onClick={handleLogout}
                     title="Cerrar sesión"
-                    className="w-9 h-9 flex items-center justify-center rounded-full text-[#616161] hover:bg-red-50 hover:text-[#D32F2F] transition-colors cursor-pointer"
+                    className="w-9 h-9 flex items-center justify-center rounded-full text-[#647067] hover:bg-red-50 hover:text-[#EF4444] transition-colors cursor-pointer"
                   >
                     <LogOut size={16} />
                   </button>

@@ -37,9 +37,9 @@ export function StorefrontCarousel({ title, items }: StorefrontCarouselProps) {
   if (!items || items.length === 0) return null;
 
   return (
-    <div className="mb-10 relative group">
-      <div className="flex items-end justify-between mb-4 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-xl font-bold text-[#212121] tracking-tight">{title}</h2>
+    <div className="mb-12 relative group">
+      <div className="flex items-end justify-between mb-5 px-4 sm:px-6 lg:px-8">
+        <h2 className="text-xl font-bold text-[#17221B] tracking-tight">{title}</h2>
       </div>
 
       <div className="relative">
@@ -47,7 +47,7 @@ export function StorefrontCarousel({ title, items }: StorefrontCarouselProps) {
         {showLeft && (
           <button
             onClick={() => scroll('left')}
-            className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center text-[#212121] hover:bg-gray-50 z-20 transition-all opacity-0 group-hover:opacity-100 border border-gray-100"
+            className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center text-[#17221B] hover:bg-gray-50 z-20 transition-all opacity-0 group-hover:opacity-100 border border-[#E3E8E4]"
             aria-label="Anterior"
           >
             <ChevronLeft size={24} />
@@ -71,7 +71,7 @@ export function StorefrontCarousel({ title, items }: StorefrontCarouselProps) {
         {showRight && (
           <button
             onClick={() => scroll('right')}
-            className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center text-[#212121] hover:bg-gray-50 z-20 transition-all opacity-0 group-hover:opacity-100 border border-gray-100"
+            className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center text-[#17221B] hover:bg-gray-50 z-20 transition-all opacity-0 group-hover:opacity-100 border border-[#E3E8E4]"
             aria-label="Siguiente"
           >
             <ChevronRight size={24} />

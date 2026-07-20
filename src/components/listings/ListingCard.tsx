@@ -38,23 +38,23 @@ export function ListingCard({ listing, animDelay = 0 }: ListingCardProps) {
   return (
     <Link 
       href={ROUTES.residuo(listing.id)}
-      className="group flex flex-col h-full animate-fade-in relative transition-transform hover:-translate-y-1 hover:shadow-lg bg-white rounded-2xl overflow-hidden border border-gray-100"
+      className="group flex flex-col h-full animate-fade-in relative transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md bg-white rounded-[20px] overflow-hidden border border-[#E3E8E4] shadow-sm"
       style={{ animationDelay: `${animDelay}ms`, animationFillMode: 'both' }}
     >
       {/* Top badges */}
       <div className="absolute top-2 left-2 z-10 flex flex-col gap-1 items-start">
         {isPromo && (
-          <span className="bg-[#FFEB3B] text-black text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">
+          <span className="bg-[#F59E0B] text-white text-[10px] font-bold px-2 py-0.5 rounded-md shadow-sm">
             PROMO -{listing.discountPercent}%
           </span>
         )}
         {isFeatured && (
-          <span className="bg-[#FF9800] text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm flex items-center gap-1">
+          <span className="bg-[#F59E0B] text-white text-[10px] font-bold px-2 py-0.5 rounded-md shadow-sm flex items-center gap-1">
             <Tag size={10} /> DESTACADO
           </span>
         )}
         {isOportunidad && (
-          <span className="bg-[#2E7D32] text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">
+          <span className="bg-[#166534] text-white text-[10px] font-bold px-2 py-0.5 rounded-md shadow-sm">
             OPORTUNIDAD
           </span>
         )}
@@ -83,15 +83,15 @@ export function ListingCard({ listing, animDelay = 0 }: ListingCardProps) {
         {/* Price & Add Button */}
         <div className="flex items-start justify-between mt-1 mb-1.5">
           <div className="flex flex-col">
-            <span className="text-xl font-black text-[#212121]">
+            <span className="text-xl font-black text-[#17221B]">
               Bs. {listing.price.toLocaleString('es-BO')}
             </span>
             {isPromo && listing.originalPrice && (
-              <span className="text-sm line-through text-[#9E9E9E] font-medium mt-0.5">
+              <span className="text-sm line-through text-[#647067] font-medium mt-0.5">
                 Bs. {listing.originalPrice.toLocaleString('es-BO')}
               </span>
             )}
-            <span className="text-[11px] text-[#757575] font-medium uppercase tracking-wider mt-0.5">
+            <span className="text-[11px] text-[#647067] font-medium uppercase tracking-wider mt-0.5">
               {listing.quantity} {listing.unit}
             </span>
           </div>
@@ -100,7 +100,7 @@ export function ListingCard({ listing, animDelay = 0 }: ListingCardProps) {
             <button 
               onClick={handleAdd}
               disabled={adding}
-              className="w-10 h-10 rounded-full bg-[#F1F8E9] flex items-center justify-center text-[#2E7D32] hover:bg-[#2E7D32] hover:text-white transition-colors border border-[#81C784] shadow-sm disabled:opacity-50 z-20"
+              className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#166534] hover:bg-[#22C55E] hover:text-white transition-colors border border-[#E3E8E4] shadow-sm disabled:opacity-50 z-20"
               aria-label="Agregar o Solicitar"
             >
               <Plus size={20} className={adding ? "animate-spin" : ""} />
@@ -109,12 +109,12 @@ export function ListingCard({ listing, animDelay = 0 }: ListingCardProps) {
         </div>
 
         {/* Title */}
-        <h3 className="font-semibold text-sm text-[#212121] leading-tight line-clamp-2 mt-1">
+        <h3 className="font-semibold text-sm text-[#17221B] leading-tight line-clamp-2 mt-1">
           {listing.title}
         </h3>
         
         {/* Distance / Extra mock info */}
-        <p className="text-[11px] text-[#9E9E9E] mt-auto pt-2">
+        <p className="text-[11px] text-[#647067] mt-auto pt-2">
           Recogida o envío disponible
         </p>
       </div>

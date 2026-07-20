@@ -10,12 +10,12 @@ interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const variantStyles: Record<BadgeVariant, string> = {
-  available: 'bg-[#E8F5E9] text-[#388E3C] border border-[#A5D6A7]',
-  soldout: 'bg-red-50 text-[#D32F2F] border border-red-200',
-  free: 'bg-[#2E7D32] text-white border border-[#2E7D32]',
-  featured: 'bg-amber-50 text-amber-700 border border-amber-200',
-  verified: 'bg-blue-50 text-blue-700 border border-blue-200',
-  promo: 'bg-[#FFEB3B] text-black border-0 font-bold',
+  available: 'bg-[#ECFDF3] text-[#166534] border border-[#22C55E]/30',
+  soldout: 'bg-red-50 text-[#EF4444] border border-red-200',
+  free: 'bg-[#22C55E] text-white border border-[#22C55E]',
+  featured: 'bg-amber-50 text-[#F59E0B] border border-amber-200',
+  verified: 'bg-blue-50 text-[#3B82F6] border border-blue-200',
+  promo: 'bg-[#F59E0B] text-white border-0 font-bold shadow-sm',
   category: 'border',
 };
 

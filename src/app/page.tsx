@@ -26,7 +26,7 @@ function HomeContent() {
   const featuredItems = useMemo(() => (allListings || []).filter(l => l.featured && l.available), [allListings]);
 
   return (
-    <main className="min-h-screen bg-white pb-20">
+    <main className="min-h-screen bg-[#F7F9F7] pb-20">
       <HeroBanner />
       
       {/* Quick category navigation */}

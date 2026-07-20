@@ -33,19 +33,19 @@ export function NewListingForm() {
   };
 
   const inputClass =
-    'w-full px-4 py-3 border border-[#E0E0E0] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2E7D32] transition-shadow';
+    'w-full px-4 h-12 border border-[#E3E8E4] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#22C55E] focus:border-[#22C55E] transition-shadow';
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5 max-w-lg">
       <div className="flex items-center gap-3 mb-2">
-        <div className="w-10 h-10 rounded-xl bg-[#F1F8E9] flex items-center justify-center">
-          <PackagePlus size={22} className="text-[#2E7D32]" />
+        <div className="w-10 h-10 rounded-xl bg-[#ECFDF3] flex items-center justify-center">
+          <PackagePlus size={22} className="text-[#166534]" />
         </div>
-        <h2 className="text-lg font-bold text-[#212121]">Publicar residuo</h2>
+        <h2 className="text-lg font-bold text-[#17221B]">Publicar residuo</h2>
       </div>
 
       <div>
-        <label htmlFor="lst-category" className="block text-sm font-semibold text-[#212121] mb-1.5">
+        <label htmlFor="lst-category" className="block text-sm font-semibold text-[#17221B] mb-1.5">
           Categoría *
         </label>
         <select
@@ -63,7 +63,7 @@ export function NewListingForm() {
       </div>
 
       <div>
-        <label htmlFor="lst-title" className="block text-sm font-semibold text-[#212121] mb-1.5">
+        <label htmlFor="lst-title" className="block text-sm font-semibold text-[#17221B] mb-1.5">
           Título *
         </label>
         <input
@@ -78,7 +78,7 @@ export function NewListingForm() {
       </div>
 
       <div>
-        <label htmlFor="lst-description" className="block text-sm font-semibold text-[#212121] mb-1.5">
+        <label htmlFor="lst-description" className="block text-sm font-semibold text-[#17221B] mb-1.5">
           Descripción
         </label>
         <textarea
@@ -87,13 +87,13 @@ export function NewListingForm() {
           onChange={(e) => setDescription(e.target.value)}
           rows={4}
           placeholder="Describí el residuo, su estado, frecuencia de disponibilidad, condiciones de retiro..."
-          className={`${inputClass} resize-none`}
+          className={`${inputClass} resize-none h-auto py-3`}
         />
       </div>
 
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label htmlFor="lst-quantity" className="block text-sm font-semibold text-[#212121] mb-1.5">
+          <label htmlFor="lst-quantity" className="block text-sm font-semibold text-[#17221B] mb-1.5">
             Cantidad *
           </label>
           <input
@@ -108,7 +108,7 @@ export function NewListingForm() {
           />
         </div>
         <div>
-          <label htmlFor="lst-unit" className="block text-sm font-semibold text-[#212121] mb-1.5">
+          <label htmlFor="lst-unit" className="block text-sm font-semibold text-[#17221B] mb-1.5">
             Unidad *
           </label>
           <select
@@ -126,7 +126,7 @@ export function NewListingForm() {
 
       <div>
         <div className="flex items-center justify-between mb-1.5">
-          <label htmlFor="lst-price" className="block text-sm font-semibold text-[#212121]">
+          <label htmlFor="lst-price" className="block text-sm font-semibold text-[#17221B]">
             Precio
           </label>
           <label className="flex items-center gap-2 cursor-pointer">
@@ -134,13 +134,13 @@ export function NewListingForm() {
               type="checkbox"
               checked={isFree}
               onChange={(e) => setIsFree(e.target.checked)}
-              className="accent-[#2E7D32]"
+              className="accent-[#166534]"
             />
-            <span className="text-sm text-[#2E7D32] font-semibold">Ofrecer como Promo</span>
+            <span className="text-sm text-[#166534] font-semibold">Ofrecer como Promo</span>
           </label>
         </div>
         <div className="relative">
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#616161] font-semibold text-sm">
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#647067] font-semibold text-sm">
             $
           </span>
           <input
@@ -151,7 +151,7 @@ export function NewListingForm() {
             onChange={(e) => setPrice(e.target.value)}
             disabled={isFree}
             placeholder="0"
-            className={`${inputClass} pl-8 ${isFree ? 'bg-gray-50 text-[#616161] cursor-not-allowed' : ''}`}
+            className={`${inputClass} pl-8 ${isFree ? 'bg-gray-50 text-[#647067] cursor-not-allowed' : ''}`}
           />
         </div>
       </div>

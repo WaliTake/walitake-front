@@ -1,31 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  /* walitake Color Palette */
-  --color-primary: #2E7D32;
-  --color-primary-light: #4CAF50;
-  --color-primary-dark: #1B5E20;
-  --color-accent: #81C784;
-  --color-surface: #F1F8E9;
-  --color-background: #FFFFFF;
-  --color-text-primary: #212121;
-  --color-text-secondary: #616161;
-  --color-border: #E0E0E0;
-  --color-error: #D32F2F;
-  --color-success: #388E3C;
+  /* walitake Color Palette (Instacart Inspired) */
+  --color-primary: #22C55E; /* Verde hoja - botones principales */
+  --color-primary-dark: #166534; /* Verde bosque - encabezados, nav */
+  --color-accent: #22C55E; 
+  --color-surface: #ECFDF3; /* Verde menta - fondos suaves */
+  --color-background: #F7F9F7; /* Fondo general neutro */
+  --color-surface-white: #FFFFFF; /* Tarjetas */
+  --color-text-primary: #17221B; /* Texto principal oscuro */
+  --color-text-secondary: #647067; /* Texto secundario gris */
+  --color-border: #E3E8E4; /* Bordes suaves */
+  --color-background-dark: #123524;
+  --color-error: #EF4444; /* Semantic Red */
+  --color-success: #22C55E; /* Semantic Green */
+  --color-warning: #F59E0B; /* Semantic Amber */
+  --color-info: #3B82F6; /* Semantic Blue */
 
   /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter', 'Manrope', system-ui, -apple-system, sans-serif;
 
   /* Border Radius */
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1rem;
-  --radius-3xl: 1.5rem;
+  --radius-sm: 0.625rem; /* 10px */
+  --radius-md: 0.875rem; /* 14px for forms */
+  --radius-lg: 1rem; /* 16px standard */
+  --radius-xl: 1.25rem; /* 20px */
+  --radius-2xl: 1.5rem; /* 24px for cards */
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #212121;
+  --background: #F7F9F7;
+  --foreground: #17221B;
 }
 
 * {

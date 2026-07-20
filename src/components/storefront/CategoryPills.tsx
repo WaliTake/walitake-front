@@ -24,7 +24,7 @@ export function CategoryPills({ categories, active, onChange }: CategoryPillsPro
   ];
 
   return (
-    <div className="py-6 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100">
+    <div className="py-6 px-4 sm:px-6 lg:px-8 bg-white border-b border-[#E3E8E4]">
       <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide snap-x justify-start md:justify-center">
         {all.map((cat) => {
           const Icon = cat.id === '' ? LayoutGrid : (iconMap[cat.icon] ?? Recycle);
@@ -40,8 +40,8 @@ export function CategoryPills({ categories, active, onChange }: CategoryPillsPro
                 className={[
                   'w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300',
                   isActive 
-                    ? 'ring-2 ring-offset-2 ring-[#2E7D32] bg-[#F1F8E9] text-[#2E7D32]'
-                    : `bg-gray-50 text-[#616161] group-hover:bg-[#F1F8E9] group-hover:text-[#2E7D32]`,
+                    ? 'ring-2 ring-offset-2 ring-[#166534] bg-[#ECFDF3] text-[#166534]'
+                    : `bg-gray-50 text-[#647067] group-hover:bg-[#ECFDF3] group-hover:text-[#166534]`,
                 ].join(' ')}
               >
                 <Icon size={28} strokeWidth={1.5} />
@@ -49,7 +49,7 @@ export function CategoryPills({ categories, active, onChange }: CategoryPillsPro
               <span 
                 className={[
                   'text-[13px] font-semibold tracking-tight transition-colors',
-                  isActive ? 'text-[#2E7D32]' : 'text-[#616161] group-hover:text-[#212121]'
+                  isActive ? 'text-[#166534]' : 'text-[#647067] group-hover:text-[#17221B]'
                 ].join(' ')}
               >
                 {cat.name}

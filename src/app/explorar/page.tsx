@@ -43,9 +43,9 @@ function ExplorarContent() {
   const isFiltering = search || categoria;
 
   return (
-    <div className="min-h-screen bg-white pb-20 font-sans">
+    <div className="min-h-screen bg-[#F7F9F7] pb-20 font-sans">
       {/* Storefront Header */}
-      <div className="bg-[#2E7D32] pt-8 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div className="bg-[#166534] pt-8 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '24px 24px' }}></div>
         
@@ -58,7 +58,7 @@ function ExplorarContent() {
               <h1 className="text-2xl md:text-3xl font-black tracking-tight leading-none mb-1">
                 EcoResiduos Market
               </h1>
-              <p className="text-[#C8E6C9] font-medium text-sm">
+              <p className="text-[#ECFDF3] font-medium text-sm">
                 Materiales directos de empresas a tu puerta
               </p>
             </div>
@@ -72,7 +72,7 @@ function ExplorarContent() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Busca madera, plásticos, orgánicos..."
-                className="w-full pl-12 pr-4 py-3.5 bg-white rounded-2xl text-base text-[#212121] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#81C784] shadow-lg font-medium transition-all"
+                className="w-full pl-12 pr-4 py-3.5 bg-white rounded-2xl text-base text-[#17221B] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#22C55E] shadow-lg font-medium transition-all border border-transparent focus:border-[#22C55E]"
               />
             </div>
           </div>
@@ -89,12 +89,12 @@ function ExplorarContent() {
       <div className="max-w-7xl mx-auto mt-8">
         {loading ? (
           <div className="flex justify-center items-center py-20">
-            <div className="w-10 h-10 border-4 border-[#2E7D32] border-t-transparent rounded-full animate-spin" />
+            <div className="w-10 h-10 border-4 border-[#166534] border-t-transparent rounded-full animate-spin" />
           </div>
         ) : isFiltering ? (
           /* Grid View for Search/Filter */
           <div className="px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-[#212121] mb-6 tracking-tight">
+            <h2 className="text-2xl font-bold text-[#17221B] mb-6 tracking-tight">
               {filtered.length} Resultado{filtered.length !== 1 && 's'}
             </h2>
             {filtered.length === 0 ? (
@@ -141,7 +141,7 @@ function ExplorarContent() {
 
 export default function ExplorarPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+    <Suspense fallback={<div className="min-h-screen bg-[#F7F9F7]" />}>
       <ExplorarContent />
     </Suspense>
   );
