@@ -5,8 +5,8 @@ from typing import List
 import uuid
 import datetime
 
-from . import models, schemas
-from .database import engine, get_db
+import models, schemas
+from database import engine, get_db
 
 # Create all tables
 models.Base.metadata.create_all(bind=engine)

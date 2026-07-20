@@ -1,8 +1,8 @@
 import datetime
 import random
 from sqlalchemy.orm import Session
-from .database import SessionLocal, engine
-from . import models
+from database import SessionLocal, engine
+import models
 
 def reset_db():
     models.Base.metadata.drop_all(bind=engine)
