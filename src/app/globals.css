@@ -82,6 +82,24 @@ body {
   animation: fadeInUp 0.4s ease forwards;
 }
 
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 3s ease-in-out infinite;
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to { width: var(--target-width, 100%); }
+}
+
+.animate-progress-fill {
+  animation: progressFill 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
 /* Line clamp utilities */
 .line-clamp-1 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
 .line-clamp-2 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }

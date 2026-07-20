@@ -2,7 +2,8 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import { SlidersHorizontal, X, RotateCcw } from 'lucide-react';
-import { mockCategories } from '@/lib/data/categories';
+import { getCategories } from '@/lib/data/categories';
+import { useMockData } from '@/hooks/useMockData';
 import { CITIES } from '@/lib/constants';
 import { Button } from '@/components/ui/Button';
 
@@ -18,6 +19,9 @@ export function FilterSidebar({ isMobile = false, onClose }: FilterSidebarProps)
   const activeCategory = params.get('categoria') ?? '';
   const activeCity = params.get('ciudad') ?? '';
   const priceType = params.get('precio') ?? 'all';
+  
+  const { data: categories } = useMockData(getCategories);
+  const safeCategories = categories || [];
 
   const updateParam = (key: string, value: string) => {
     const p = new URLSearchParams(params.toString());
@@ -88,7 +92,7 @@ export function FilterSidebar({ isMobile = false, onClose }: FilterSidebarProps)
               Todas las categorías
             </span>
           </label>
-          {mockCategories.map((cat) => (
+          {safeCategories.map((cat) => (
             <label key={cat.id} className="flex items-center gap-2.5 cursor-pointer group">
               <input
                 type="radio"

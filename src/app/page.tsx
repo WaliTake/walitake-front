@@ -7,21 +7,19 @@ import { PromoBanners } from '@/components/home/PromoBanners';
 import { CategoryPills } from '@/components/storefront/CategoryPills';
 import { StorefrontCarousel } from '@/components/storefront/StorefrontCarousel';
 import { ListingCard } from '@/components/listings/ListingCard';
-import { mockCategories } from '@/lib/data/categories';
 import { useMockData } from '@/hooks/useMockData';
 import { getListings } from '@/lib/data/listings';
+import { getCategories } from '@/lib/data/categories';
 import { ROUTES } from '@/lib/constants';
 
 function HomeContent() {
   const router = useRouter();
-  const { data: allListings } = useMockData(getListings);
+  const { data: allListings, loading } = useMockData(getListings);
+  const { data: categories } = useMockData(getCategories);
+  const safeCategories = categories || [];
 
-  const handleCategorySelect = (id: string) => {
-    if (id) {
-      router.push(`${ROUTES.explorar}?categoria=${id}`);
-    } else {
-      router.push(ROUTES.explorar);
-    }
+  const handleCategorySelect = (categoryId: string) => {
+    router.push(`/explorar?categoria=${categoryId}`);
   };
 
   const promoItems = useMemo(() => (allListings || []).filter(l => l.price === 0 && l.available), [allListings]);
@@ -34,7 +32,7 @@ function HomeContent() {
       {/* Quick category navigation */}
       <div className="border-b border-gray-100">
         <div className="max-w-7xl mx-auto">
-          <CategoryPills categories={mockCategories} active="" onChange={handleCategorySelect} />
+          <CategoryPills categories={safeCategories} active="" onChange={handleCategorySelect} />
         </div>
       </div>
 

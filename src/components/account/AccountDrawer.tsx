@@ -8,7 +8,8 @@ import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { Skeleton } from '@/components/ui/Skeleton';
-import { mockCategories } from '@/lib/data/categories';
+import { getCategories } from '@/lib/data/categories';
+import { useMockData } from '@/hooks/useMockData';
 import { getBusinessByUserId } from '@/lib/data/businesses';
 import { getListingsByBusiness } from '@/lib/data/listings';
 import { ROUTES } from '@/lib/constants';
@@ -136,6 +137,9 @@ function ResiduosTab({ listings: initial, dataLoading }: { listings: WasteListin
   const [listings, setListings] = useState(initial);
   useEffect(() => { setListings(initial); }, [initial]);
 
+  const { data: categories } = useMockData(getCategories);
+  const safeCategories = categories || [];
+
   const toggle = (id: string) => {
     setListings((p) => p.map((l) => l.id === id ? { ...l, available: !l.available } : l));
     toast.success('Estado actualizado');
@@ -177,7 +181,7 @@ function ResiduosTab({ listings: initial, dataLoading }: { listings: WasteListin
         </Link>
       </div>
       {listings.map((l) => {
-        const cat = mockCategories.find((c) => c.id === l.categoryId);
+        const cat = safeCategories.find((c) => c.id === l.categoryId);
         return (
           <div key={l.id} className={`flex gap-3 p-3 rounded-xl border ${l.available ? 'bg-white border-[#E0E0E0]' : 'bg-gray-50 border-gray-200 opacity-70'}`}>
             <div className="relative w-14 h-14 rounded-lg overflow-hidden shrink-0 bg-gray-100">

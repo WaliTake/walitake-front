@@ -7,7 +7,8 @@ import { Plus, Trash2, ArchiveX, Package } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { EmptyState } from '@/components/ui/EmptyState';
-import { mockCategories } from '@/lib/data/categories';
+import { getCategories } from '@/lib/data/categories';
+import { useMockData } from '@/hooks/useMockData';
 import { ROUTES } from '@/lib/constants';
 import { toast } from 'react-hot-toast';
 import type { WasteListing } from '@/lib/types';
@@ -18,6 +19,9 @@ interface MyListingsProps {
 
 export function MyListings({ initialListings }: MyListingsProps) {
   const [listings, setListings] = useState<WasteListing[]>(initialListings);
+  
+  const { data: categories } = useMockData(getCategories);
+  const safeCategories = categories || [];
 
   const toggleAvailability = (id: string) => {
     setListings((prev) =>
@@ -63,7 +67,7 @@ export function MyListings({ initialListings }: MyListingsProps) {
 
       <div className="space-y-3">
         {listings.map((listing) => {
-          const cat = mockCategories.find((c) => c.id === listing.categoryId);
+          const cat = safeCategories.find((c) => c.id === listing.categoryId);
           return (
             <div
               key={listing.id}

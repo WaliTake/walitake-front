@@ -8,7 +8,7 @@ import { StorefrontCarousel } from '@/components/storefront/StorefrontCarousel';
 import { ListingCard } from '@/components/listings/ListingCard';
 import { useMockData } from '@/hooks/useMockData';
 import { getListings } from '@/lib/data/listings';
-import { mockCategories } from '@/lib/data/categories';
+import { getCategories } from '@/lib/data/categories';
 import { EmptyState } from '@/components/ui/EmptyState';
 import { PackageSearch } from 'lucide-react';
 
@@ -16,6 +16,8 @@ function ExplorarContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const { data: allListings, loading } = useMockData(getListings);
+  const { data: categories } = useMockData(getCategories);
+  const safeCategories = categories || [];
 
   const initialSearch = searchParams.get('busqueda') ?? '';
   const initialCategory = searchParams.get('categoria') ?? '';
@@ -79,7 +81,7 @@ function ExplorarContent() {
 
       {/* Category Navigation */}
       <CategoryPills 
-        categories={mockCategories} 
+        categories={safeCategories} 
         active={categoria} 
         onChange={(cat) => setCategoria(cat)} 
       />

@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { PackagePlus } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
-import { mockCategories } from '@/lib/data/categories';
+import { getCategories } from '@/lib/data/categories';
+import { useMockData } from '@/hooks/useMockData';
 import { UNITS, ROUTES } from '@/lib/constants';
 import { toast } from 'react-hot-toast';
 
@@ -18,6 +19,9 @@ export function NewListingForm() {
   const [price, setPrice] = useState('');
   const [isFree, setIsFree] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const { data: categories } = useMockData(getCategories);
+  const safeCategories = categories || [];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,7 +56,7 @@ export function NewListingForm() {
           className={`${inputClass} bg-white cursor-pointer`}
         >
           <option value="">Seleccioná una categoría</option>
-          {mockCategories.map((cat) => (
+          {safeCategories.map((cat) => (
             <option key={cat.id} value={cat.id}>{cat.name}</option>
           ))}
         </select>
