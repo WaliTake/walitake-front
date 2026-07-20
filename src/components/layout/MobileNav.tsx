@@ -76,7 +76,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
               <Leaf className="text-white" size={18} />
             </div>
             <span className="font-bold text-lg">
-              Eco<span className="text-[#2E7D32]">Residuos</span>
+              Wali<span className="text-[#2E7D32]">Take</span>
             </span>
           </div>
           <button

@@ -56,7 +56,7 @@ function ExplorarContent() {
             </div>
             <div className="text-white">
               <h1 className="text-2xl md:text-3xl font-black tracking-tight leading-none mb-1">
-                EcoResiduos Market
+                WaliTake
               </h1>
               <p className="text-[#ECFDF3] font-medium text-sm">
                 Materiales directos de empresas a tu puerta

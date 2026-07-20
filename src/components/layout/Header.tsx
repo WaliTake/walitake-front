@@ -68,7 +68,7 @@ export function Header() {
                 <Leaf className="text-white" size={20} />
               </div>
               <span className="font-bold text-xl text-[#17221B] hidden sm:block">
-                Eco<span className="text-[#166534]">Residuos</span>
+                Wali<span className="text-[#166534]">Take</span>
               </span>
             </Link>
 
