@@ -33,7 +33,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               {[
                 { icon: <Code2 size={18} />, label: 'GitHub', href: 'https://github.com/orgs/WaliTake/repositories' },
-                { icon: <Globe size={18} />, label: 'Website', href: 'https://vercel.com/' },
+                { icon: <Globe size={18} />, label: 'Website', href: 'https://walitake-web.vercel.app/' },
               ].map((s) => (
                 <a
                   key={s.label}

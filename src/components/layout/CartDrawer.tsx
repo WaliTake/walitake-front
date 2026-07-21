@@ -41,12 +41,12 @@ export function CartDrawer() {
         const data = await res.json();
         // Save the XP earned before clearing the cart
         setEarnedXP(totalXP);
-        
+
         // Update user xp in mock context
         login({ ...user, xp: data.new_total_xp });
         clearCart();
         setIsSuccess(true);
-        
+
         // Sublime Confetti
         const duration = 3000;
         const end = Date.now() + duration;
@@ -86,23 +86,22 @@ export function CartDrawer() {
     <>
       {/* Backdrop */}
       {isCartOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-50 transition-opacity"
           onClick={handleClose}
         />
       )}
 
       {/* Drawer */}
-      <div 
-        className={`fixed top-0 right-0 h-full w-full sm:w-[400px] bg-white z-50 shadow-2xl transform transition-transform duration-300 ease-in-out flex flex-col ${
-          isCartOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+      <div
+        className={`fixed top-0 right-0 h-full w-full sm:w-[400px] bg-white z-50 shadow-2xl transform transition-transform duration-300 ease-in-out flex flex-col ${isCartOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         <div className="p-4 sm:p-6 border-b border-[#E0E0E0] flex items-center justify-between bg-white sticky top-0 z-10">
           <h2 className="text-xl font-bold text-[#212121]">
             {isSuccess ? '¡Compra Exitosa!' : 'Tu Carrito'}
           </h2>
-          <button 
+          <button
             onClick={handleClose}
             className="p-2 hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
           >
@@ -121,7 +120,7 @@ export function CartDrawer() {
                   <Sparkles size={20} className="text-amber-600" />
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="text-3xl font-black text-[#212121] mb-2 tracking-tight">¡Gracias por tu compra!</h3>
                 <p className="text-[#616161] text-lg leading-relaxed">
@@ -169,7 +168,7 @@ export function CartDrawer() {
                       <span className="font-black text-[#212121]">
                         Bs. {item.price.toLocaleString('es-BO')}
                       </span>
-                      <button 
+                      <button
                         onClick={() => removeFromCart(item.cartId)}
                         className="text-[#9E9E9E] hover:text-red-500 transition-colors p-1"
                       >
@@ -191,14 +190,14 @@ export function CartDrawer() {
               <span className="font-bold text-[#212121]">Bs. {subtotal.toLocaleString('es-BO')}</span>
             </div>
             <div className="flex justify-between items-center mb-4 text-[#2E7D32]">
-              <span className="font-semibold text-sm flex items-center gap-1"><Leaf size={14}/> Recompensa Ambiental</span>
+              <span className="font-semibold text-sm flex items-center gap-1"><Leaf size={14} /> Recompensa Ambiental</span>
               <span className="font-bold text-sm">+{totalXP} XP</span>
             </div>
-            
+
             {user ? (
-              <Button 
-                variant="primary" 
-                className="w-full h-14 text-lg !rounded-2xl" 
+              <Button
+                variant="primary"
+                className="w-full h-14 text-lg !rounded-2xl"
                 onClick={handleCheckout}
                 disabled={isCheckingOut}
               >
