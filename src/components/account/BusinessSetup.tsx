@@ -103,7 +103,7 @@ export function BusinessSetup({ existing, onSave }: BusinessSetupProps) {
             value={city}
             onChange={(e) => setCity(e.target.value)}
             required
-            placeholder="Buenos Aires"
+            placeholder="La Paz"
             className="w-full px-4 py-3 border border-[#E0E0E0] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2E7D32] transition-shadow"
           />
         </div>
@@ -116,7 +116,7 @@ export function BusinessSetup({ existing, onSave }: BusinessSetupProps) {
             type="tel"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            placeholder="+54 11 1234-5678"
+            placeholder="+591 6666-7777"
             className="w-full px-4 py-3 border border-[#E0E0E0] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2E7D32] transition-shadow"
           />
         </div>
@@ -131,7 +131,7 @@ export function BusinessSetup({ existing, onSave }: BusinessSetupProps) {
           type="text"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
-          placeholder="Av. Corrientes 1234"
+          placeholder="Av. Hernando Siles 1234"
           className="w-full px-4 py-3 border border-[#E0E0E0] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2E7D32] transition-shadow"
         />
       </div>

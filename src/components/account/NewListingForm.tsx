@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { PackagePlus } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { getCategories } from '@/lib/data/categories';
+import { createListing } from '@/lib/data/listings';
 import { useMockData } from '@/hooks/useMockData';
 import { UNITS, ROUTES } from '@/lib/constants';
 import { toast } from 'react-hot-toast';
@@ -17,6 +18,8 @@ export function NewListingForm() {
   const [quantity, setQuantity] = useState('');
   const [unit, setUnit] = useState('kg');
   const [price, setPrice] = useState('');
+  const [discountPercent, setDiscountPercent] = useState('');
+  const [imageUrl, setImageUrl] = useState('');
   const [isFree, setIsFree] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -26,10 +29,33 @@ export function NewListingForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1000));
-    setLoading(false);
-    toast.success('¡Residuo publicado exitosamente!');
-    router.push(ROUTES.cuenta);
+    
+    try {
+      const payload = {
+        title,
+        description,
+        category_id: categoryId,
+        quantity: parseFloat(quantity) || 0,
+        unit,
+        price: isFree ? 0 : (parseFloat(price) || 0),
+        original_price: null,
+        discount_percent: discountPercent ? parseInt(discountPercent, 10) : null,
+        image_url: imageUrl || 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80', // Default placeholder image
+        available: true,
+        featured: false,
+        tags: `${categoryId},nuevo`,
+        business_id: 'biz-1' // Hardcoded demo business ID
+      };
+
+      await createListing(payload);
+      toast.success('¡Residuo publicado exitosamente!');
+      router.push(ROUTES.cuenta);
+    } catch (error) {
+      toast.error('Hubo un error al publicar el residuo');
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputClass =
@@ -91,6 +117,20 @@ export function NewListingForm() {
         />
       </div>
 
+      <div>
+        <label htmlFor="lst-image" className="block text-sm font-semibold text-[#17221B] mb-1.5">
+          URL de la Imagen
+        </label>
+        <input
+          id="lst-image"
+          type="url"
+          value={imageUrl}
+          onChange={(e) => setImageUrl(e.target.value)}
+          placeholder="https://ejemplo.com/imagen.jpg"
+          className={inputClass}
+        />
+      </div>
+
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label htmlFor="lst-quantity" className="block text-sm font-semibold text-[#17221B] mb-1.5">
@@ -124,35 +164,59 @@ export function NewListingForm() {
         </div>
       </div>
 
-      <div>
-        <div className="flex items-center justify-between mb-1.5">
-          <label htmlFor="lst-price" className="block text-sm font-semibold text-[#17221B]">
-            Precio
-          </label>
-          <label className="flex items-center gap-2 cursor-pointer">
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <div className="flex items-center justify-between mb-1.5">
+            <label htmlFor="lst-price" className="block text-sm font-semibold text-[#17221B]">
+              Precio
+            </label>
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={isFree}
+                onChange={(e) => setIsFree(e.target.checked)}
+                className="accent-[#166534]"
+              />
+              <span className="text-sm text-[#166534] font-semibold">Promo gratis</span>
+            </label>
+          </div>
+          <div className="relative">
+            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#647067] font-semibold text-sm">
+              $
+            </span>
             <input
-              type="checkbox"
-              checked={isFree}
-              onChange={(e) => setIsFree(e.target.checked)}
-              className="accent-[#166534]"
+              id="lst-price"
+              type="number"
+              min="0"
+              value={isFree ? '0' : price}
+              onChange={(e) => setPrice(e.target.value)}
+              disabled={isFree}
+              placeholder="0"
+              className={`${inputClass} pl-8 ${isFree ? 'bg-gray-50 text-[#647067] cursor-not-allowed' : ''}`}
             />
-            <span className="text-sm text-[#166534] font-semibold">Ofrecer como Promo</span>
-          </label>
+          </div>
         </div>
-        <div className="relative">
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#647067] font-semibold text-sm">
-            $
-          </span>
-          <input
-            id="lst-price"
-            type="number"
-            min="0"
-            value={isFree ? '0' : price}
-            onChange={(e) => setPrice(e.target.value)}
-            disabled={isFree}
-            placeholder="0"
-            className={`${inputClass} pl-8 ${isFree ? 'bg-gray-50 text-[#647067] cursor-not-allowed' : ''}`}
-          />
+
+        <div>
+          <label htmlFor="lst-discount" className="block text-sm font-semibold text-[#17221B] mb-1.5">
+            Descuento (%)
+          </label>
+          <div className="relative">
+            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#647067] font-semibold text-sm">
+              %
+            </span>
+            <input
+              id="lst-discount"
+              type="number"
+              min="0"
+              max="100"
+              value={discountPercent}
+              onChange={(e) => setDiscountPercent(e.target.value)}
+              disabled={isFree}
+              placeholder="0"
+              className={`${inputClass} pl-8 ${isFree ? 'bg-gray-50 text-[#647067] cursor-not-allowed' : ''}`}
+            />
+          </div>
         </div>
       </div>
 

@@ -72,7 +72,7 @@ export function ProfileForm() {
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          placeholder="+54 11 1234-5678"
+          placeholder="+591 6666-7777"
           className="w-full px-4 py-3 border border-[#E0E0E0] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2E7D32] transition-shadow"
         />
       </div>
