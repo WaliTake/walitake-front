@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { ZoomIn } from 'lucide-react';
+import { ZoomIn, X } from 'lucide-react';
 
 interface ImageGalleryProps {
   imageUrl: string;
@@ -31,9 +31,20 @@ export function ImageGallery({ imageUrl, title }: ImageGalleryProps) {
       {/* Fullscreen overlay */}
       {zoomed && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 cursor-zoom-out"
+          className="fixed inset-0 z-50 bg-black/90 flex flex-col items-center justify-center p-4 cursor-zoom-out"
           onClick={() => setZoomed(false)}
         >
+          <button 
+            className="absolute top-6 right-6 z-50 text-white/70 hover:text-white bg-black/50 hover:bg-black/80 rounded-full p-2 transition-colors cursor-pointer"
+            onClick={(e) => {
+              e.stopPropagation();
+              setZoomed(false);
+            }}
+            aria-label="Cerrar vista completa"
+          >
+            <X size={28} />
+          </button>
+          
           <div className="relative max-w-4xl w-full max-h-[85vh] aspect-video">
             <Image
               src={imageUrl}

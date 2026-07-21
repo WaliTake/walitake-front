@@ -55,7 +55,7 @@ def seed_db():
     # 3. 6 Businesses (Users 1 to 6 own them)
     businesses = []
     business_names = ["EcoMaderas S.A.", "Restaurante Verde", "Fábrica Plástica", "Impresos del Sur", "Metalúrgica San Jorge", "Cafetería Central"]
-    cities = ["Capital Federal", "Córdoba", "Rosario", "Mendoza", "La Plata", "Mar del Plata"]
+    cities = ["Cementerio", "Max Paredes", "Llojeta", "Miraflores", "Sopocachi", "Mariscal Santa Cruz"]
     types = ["Carpintería", "Gastronomía", "Industria", "Imprenta", "Metalúrgica", "Gastronomía"]
     
     for i in range(6):
@@ -63,9 +63,9 @@ def seed_db():
             id=f"biz-{i+1}",
             name=business_names[i],
             description=f"Empresa de {types[i]} comprometida con la sustentabilidad.",
-            address=f"Calle Falsa {100 + i*10}",
+            address=f"Av. Torrez {100 + i*10}",
             city=cities[i],
-            phone=f"0800-eco-{i}",
+            phone=f"67364789-eco-{i}",
             type=types[i],
             verified=True,
             rating=round(random.uniform(4.0, 5.0), 1),
