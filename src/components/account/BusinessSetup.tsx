@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/Button';
 import { BUSINESS_TYPES, ROUTES } from '@/lib/constants';
 import { toast } from 'react-hot-toast';
 import type { Business } from '@/lib/types';
+import { createBusiness } from '@/lib/data/businesses';
+import { useAuth } from '@/hooks/useAuth';
 
 interface BusinessSetupProps {
   existing?: Business | null;
@@ -15,6 +17,7 @@ interface BusinessSetupProps {
 
 export function BusinessSetup({ existing, onSave }: BusinessSetupProps) {
   const router = useRouter();
+  const { user } = useAuth();
   const [name, setName] = useState(existing?.name ?? '');
   const [description, setDescription] = useState(existing?.description ?? '');
   const [address, setAddress] = useState(existing?.address ?? '');
@@ -26,12 +29,28 @@ export function BusinessSetup({ existing, onSave }: BusinessSetupProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 900));
-    const data = { name, description, address, city, phone, type };
-    onSave?.(data);
-    setLoading(false);
-    toast.success(existing ? 'Negocio actualizado' : 'Negocio creado exitosamente');
-    router.push(ROUTES.cuenta);
+    
+    try {
+      const data = { name, description, address, city, phone, type, userId: user?.id };
+      
+      if (onSave) {
+        onSave(data);
+      } else {
+        if (!existing) {
+          await createBusiness(data);
+        } else {
+          // Future updateBusiness call could go here
+        }
+      }
+      
+      toast.success(existing ? 'Negocio actualizado' : 'Negocio creado exitosamente');
+      router.push(ROUTES.cuenta);
+    } catch (err) {
+      toast.error('Hubo un error al guardar el negocio');
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

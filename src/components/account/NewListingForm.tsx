@@ -9,9 +9,12 @@ import { createListing } from '@/lib/data/listings';
 import { useMockData } from '@/hooks/useMockData';
 import { UNITS, ROUTES } from '@/lib/constants';
 import { toast } from 'react-hot-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { getBusinessByUserId } from '@/lib/data/businesses';
 
 export function NewListingForm() {
   const router = useRouter();
+  const { user } = useAuth();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [categoryId, setCategoryId] = useState('');
@@ -28,9 +31,21 @@ export function NewListingForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!user) {
+      toast.error('Debes iniciar sesión para publicar');
+      return;
+    }
+    
     setLoading(true);
     
     try {
+      const biz = await getBusinessByUserId(user.id);
+      if (!biz) {
+        toast.error('Debes crear un negocio primero');
+        setLoading(false);
+        return;
+      }
+      
       const payload = {
         title,
         description,
@@ -40,11 +55,11 @@ export function NewListingForm() {
         price: isFree ? 0 : (parseFloat(price) || 0),
         original_price: null,
         discount_percent: discountPercent ? parseInt(discountPercent, 10) : null,
-        image_url: imageUrl || 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80', // Default placeholder image
+        image_url: imageUrl || 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80',
         available: true,
         featured: false,
         tags: `${categoryId},nuevo`,
-        business_id: 'biz-1' // Hardcoded demo business ID
+        business_id: biz.id
       };
 
       await createListing(payload);
