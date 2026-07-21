@@ -59,7 +59,7 @@ function ExplorarContent() {
                 WaliTake
               </h1>
               <p className="text-[#ECFDF3] font-medium text-sm">
-                Materiales directos de empresas a tu puerta
+                Dale una segunda vida a tus residuos y encuentra oportunidades de negocio
               </p>
             </div>
           </div>

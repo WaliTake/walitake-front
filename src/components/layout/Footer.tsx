@@ -4,23 +4,11 @@ import { APP_NAME, ROUTES } from '@/lib/constants';
 
 const footerLinks = {
   plataforma: [
-    { label: 'Cómo funciona', href: '#' },
+    { label: 'Acerca de', href: '/acerca-de' },
     { label: 'Explorar residuos', href: ROUTES.explorar },
     { label: 'Publicar residuo', href: ROUTES.nuevoResiduo },
-    { label: 'Para empresas', href: '#' },
-  ],
-  soporte: [
-    { label: 'Centro de ayuda', href: '#' },
-    { label: 'Contacto', href: '#' },
-    { label: 'Reportar problema', href: '#' },
-    { label: 'Estado del servicio', href: '#' },
-  ],
-  legal: [
-    { label: 'Términos de uso', href: '#' },
-    { label: 'Privacidad', href: '#' },
-    { label: 'Cookies', href: '#' },
-    { label: 'Aviso legal', href: '#' },
-  ],
+    { label: 'Para empresas', href: '/para-empresas' },
+  ]
 };
 
 export function Footer() {
@@ -44,9 +32,8 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-3">
               {[
-                { icon: <Code2 size={18} />, label: 'GitHub', href: '#' },
-                { icon: <Globe size={18} />, label: 'Twitter', href: '#' },
-                { icon: <Camera size={18} />, label: 'Instagram', href: '#' },
+                { icon: <Code2 size={18} />, label: 'GitHub', href: 'https://github.com/orgs/WaliTake/repositories' },
+                { icon: <Globe size={18} />, label: 'Website', href: 'https://vercel.com/' },
               ].map((s) => (
                 <a
                   key={s.label}
