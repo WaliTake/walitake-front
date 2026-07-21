@@ -10,7 +10,7 @@ import confetti from 'canvas-confetti';
 
 export function CartDrawer() {
   const { isCartOpen, setIsCartOpen, items, removeFromCart, clearCart, totalXP } = useCart();
-  const { user, login } = useAuth();
+  const { user, updateUser } = useAuth();
   const [isCheckingOut, setIsCheckingOut] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [earnedXP, setEarnedXP] = useState(0);
@@ -28,7 +28,8 @@ export function CartDrawer() {
     setIsCheckingOut(true);
 
     try {
-      const res = await fetch('http://127.0.0.1:8000/checkout', {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+      const res = await fetch(`${API_URL}/checkout`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -43,7 +44,7 @@ export function CartDrawer() {
         setEarnedXP(totalXP);
 
         // Update user xp in mock context
-        login({ ...user, xp: data.new_total_xp });
+        updateUser({ xp: data.new_total_xp });
         clearCart();
         setIsSuccess(true);
 
