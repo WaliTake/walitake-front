@@ -2,7 +2,7 @@ import type { WasteListing } from '@/lib/types';
 import { delay } from '@/lib/utils/delay';
 import { LOADING_DELAY } from '@/lib/constants';
 
-const API_URL = 'http://127.0.0.1:8000';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
 
 export async function getListings(): Promise<WasteListing[]> {
   try {
